@@ -1,5 +1,5 @@
-### Team 23, CSE 110 SP23 @ UC San Diego
 # Fortune 500
+## Team 23 — CSE 110 @ UC San Diego, Spring 2023
 
 We are using AGILE methodologies to develop fortune-telling-related web applications. We value collaboration, clear expectations, and a good joke.
 
