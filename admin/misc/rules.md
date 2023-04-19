@@ -3,8 +3,11 @@
 
 We agree to the rules set forth in this contract.
 
-We expect
-1. abcdef
+We expect team members to
+1. be present mentally and physically when possible, and clearly articulate blockers when not
+2. build off of ideas instead of tearing them down
+3. understand and respect each others' preferences for communication, and clearly articulate their own
+4. 
 
 In the case that the above expectations are not fulfilled we
 1. abcdef
