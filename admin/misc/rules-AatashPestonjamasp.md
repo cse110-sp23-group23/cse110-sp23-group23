@@ -19,4 +19,4 @@ In the case that the above expectations are not fulfilled we will
 3. meet one-on-one with team leads to draw a path forward,
 4. and reach out to course staff as a last resort.
 
-Signature: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Date: \_\_\/\_\_\/\_\_\_\_\_
+Signature: Aatash Pestonjamasp Date: 4/19/23
