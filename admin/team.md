@@ -5,7 +5,10 @@ We are using AGILE methodologies to develop fortune-telling-related web applicat
 
 The Team:
 - Luke Sheltraw, Leader [(GitHub)](https://github.com/Luke-Sheltraw)
-- Luke Skerrett, Leader [(GitHub)](https://github.com/LukeSkerrett)
+- Luke Skerrett, Leader [(GitHub)](https://github.com/LukeSkerrett): 
+
+Luke is a 3rd year Math/CS major at Seventh College from Simi Valley, California. In his free time he loves to play basketball, listen to music, and freestyle rap.
+
 - Marc Baeuerle, Designer [(GitHub)](https://github.com/MarcBaeuerle)
 - Eric Vu, Planner [(GitHub)](https://github.com/air-wickvu)
 - Neel Basu, Developer [(GitHub)](https://github.com/neel-basu)
