@@ -1,4 +1,5 @@
-# Team 23 (Fortune 500) Team Contract
+# Fortune 500 (Team Contract)
+## Team 23 — CSE 110 @ UC San Diego, Spring 2023
 
 We agree to the rules set forth in this contract.
 
