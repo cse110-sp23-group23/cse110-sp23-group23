@@ -15,5 +15,8 @@ Luke is a 3rd year Math/CS major at Seventh College from Simi Valley, California
 - Xiaonan Fu, Developer [(GitHub)](https://github.com/XiaonanFu-ucsd)
 - Prashasth Katukojwala, Developer [(GitHub)](https://github.com/prashasthk)
 - Aatash Pestonjamasp, Developer [(GitHub)](https://github.com/AAP127)
+
+Aatash is a second year Computer Engineering student in Warren college. Outside of classes, he enjoys riding his bike and hanging out with friends.
+
 - Runpeng Jian, Developer [(GitHub)](https://github.com/RunpengJ)
 - Christopher Hashim, Developer [(GitHub)](https://github.com/chashim39)
