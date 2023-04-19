@@ -1,2 +1,16 @@
 ### Team 23, CSE 110 SP23 @ UC San Diego
 # Fortune 500
+
+We are using AGILE methodologies to develop fortune-telling-related web applications. We value collaboration, clear expectations, and a good joke.
+
+The Team:
+- Luke Sheltraw, Leader [(GitHub)](https://github.com/Luke-Sheltraw)
+- Luke Skerrett, Leader [(GitHub)](https://github.com/LukeSkerrett)
+- Marc Baeuerle, Designer [(GitHub)](https://github.com/MarcBaeuerle)
+- Eric Vu, Planner [(GitHub)](https://github.com/air-wickvu)
+- Neel Basu, Developer [(GitHub)](https://github.com/neel-basu)
+- Xiaonan Fu, Developer [(GitHub)](https://github.com/XiaonanFu-ucsd)
+- Prashasth Katukojwala, Developer [(GitHub)](https://github.com/prashasthk)
+- Aatash Pestonjamasp, Developer [(GitHub)](https://github.com/AAP127)
+- Runpeng Jian, Developer [(GitHub)](https://github.com/RunpengJ)
+- Christopher Hashim, Developer [(GitHub)](https://github.com/chashim39)
