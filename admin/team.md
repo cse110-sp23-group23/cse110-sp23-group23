@@ -17,13 +17,12 @@ Originally Team #23, we are team **FORTUNE 500**, a team of 10 UC San Diego stud
 Luke is a 3rd year Math/CS major at Seventh College from Simi Valley, California. In his free time he loves to play basketball, listen to music, and freestyle rap.
 <br>
 
- ### **Marc Baeuerle**, Designer [(GitHub)](https://github.com/MarcBaeuerle)
+### **Marc Baeuerle**, Designer [(GitHub)](https://github.com/MarcBaeuerle)
 
 <br>
 
 ### **Eric Vu**, Planner [(GitHub)](https://github.com/air-wickvu)
 Eric is a 3rd year Computer Engineering Major at Warren College. On his days off he likes to relax on the beach, enjoy live concerts, spending quality time with family and friends. 
-
 <br>
 
 ### **Neel Basu**, Developer [(GitHub)](https://github.com/neel-basu)
