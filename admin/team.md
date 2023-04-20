@@ -50,6 +50,7 @@ Aatash is a second year Computer Engineering student in Warren college. Outside 
 <br>
 
 ### **Runpeng Jian**, Developer [(GitHub)](https://github.com/RunpengJ)
+<img src="./members/runpengjian.jpeg" width="144">
 Runpeng is a third year Computer Science Major at Warren College. He likes to do sports, listen to music and watch anime in his spare time.
 <br>
 
