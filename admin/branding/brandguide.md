@@ -6,3 +6,6 @@
 
 ### **Colors**:
 <img src="assets/colorguide1.png" alt="red color" width="144"><img src="assets/colorguide2.png" alt="purple color" width="144">
+
+### **Fonts**:
+<img src="assets/potentialfonts.png" alt="Fortune 500 Fonts" width="300">
