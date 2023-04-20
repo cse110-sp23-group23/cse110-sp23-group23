@@ -2,12 +2,12 @@
 
 <br>
 
-## About Us:
+## About Us
 
 Originally just Team 23, we are now **FORTUNE 500**, a group of ten UC San Diego students in CSE 110 SP23. We are using AGILE methodologies to develop fortune-telling-related web applications. We value collaboration, clear expectations, and a good joke. We believe that some facets of a successful team include ensuring an environment where team members are comfortable to reach out for help, supporting each other's ideas, and treating everyone and their work equally important. We pledge to uphold all the rules established in our [team contract](./misc/rules.md) in our pursuit of more effective software development and engineering practices.
 <br>
 
-## The Team:
+## Meet the Team!
 
 ### **Luke Sheltraw**, Leader [(GitHub)](https://github.com/Luke-Sheltraw)
 <img src="./members/lukesheltraw_profile.jpeg" width="144">
@@ -45,7 +45,7 @@ Xiaonan is a third year Cognitive Science major at Warren College. He plays the 
 ### **Prashasth Katukojwala**, Developer [(GitHub)](https://github.com/prashasthk)
 <img src="./members/prash_profile.jpeg" width="144">
 
-Prashasth is a second year Computer Science student in Warren. In his free time, he enjoys watching films, listening to music, or just chatting with his friends.
+Prashasth is a second year Computer Science student in Warren College. In his free time, he enjoys watching films, listening to music, or just chatting with his friends.
 <br> <br>
 
 ### **Aatash Pestonjamasp**, Developer [(GitHub)](https://github.com/AAP127)
