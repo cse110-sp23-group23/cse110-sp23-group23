@@ -16,3 +16,6 @@
 
 ### **Fonts**:
 <img src="assets/potentialfonts.png" alt="Fortune 500 Fonts" width="300">
+
+### **Assets**:
+<img src="assets/moneybag.png" alt="Money Bag" width="300">
