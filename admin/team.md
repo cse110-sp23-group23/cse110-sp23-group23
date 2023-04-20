@@ -33,6 +33,8 @@ Eric is a 3rd year Computer Engineering Major at Warren College. On his days off
 Xiaonan is a third year Cognitive Science major at Warren College. He plays the Game Battlefield V a lot and enjoys watching anime. 
 
 ### **Prashasth Katukojwala**, Developer [(GitHub)](https://github.com/prashasthk)
+<img src="./members/prash_profile.jpeg" width="200px" height="175px">
+
 Prashasth is a second year Computer Science student in Warren. In his free time, he enjoys watching films, listening to music, or just chatting with his friends.
 <br>
 
