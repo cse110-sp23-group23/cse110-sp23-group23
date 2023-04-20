@@ -1,10 +1,7 @@
-<h2 style="line-height: 100px; float: left; font-size: 30px;"> TEAM FORTUNE 500 </h2>
-<div style="text-align: right">
-     <img src="./branding/teamlogo.png" width="100" height="100">
-</div>
+<p style="line-height:100px; float: left; font-size: 30px;"> TEAM FORTUNE 500 <p> &nbsp; &nbsp; &nbsp; &nbsp;
+<img src="./branding/teamlogo.png" width="100" height="100">
 
-
-
+---
 
 
 <br>
