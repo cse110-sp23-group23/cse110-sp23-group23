@@ -13,3 +13,6 @@
 <img src="assets/slideshowpreview.jpeg" alt="slideshow preview" width="400">
 
 [Permalink](https://slidesgo.com/theme/minimalist-marketing-plan?variant=1165) to download.
+
+### **Fonts**:
+<img src="assets/potentialfonts.png" alt="Fortune 500 Fonts" width="300">
