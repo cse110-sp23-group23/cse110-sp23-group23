@@ -22,7 +22,8 @@ Luke is a 3rd year Math/CS major at Seventh College from Simi Valley, California
 <br> <br>
 
 ### **Marc Baeuerle**, Designer [(GitHub)](https://github.com/MarcBaeuerle)
-
+<img src="./members/marc.jpg" width="144">
+Marc is a 3rd year Math/CS major in Muir college from Phuket, Thailand. When he's not stuck on assignments you can find him fiddling around with his camera or playinf Dota.
 <br> <br>
 
 ### **Eric Vu**, Planner [(GitHub)](https://github.com/air-wickvu)
