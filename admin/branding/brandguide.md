@@ -19,3 +19,6 @@
 
 ### **Assets**:
 <img src="assets/moneybag.png" alt="Money Bag" width="300">
+
+### **Mascot**:
+<img src="assets/scrooge.jpeg" alt="Scrooge McDuck Mascot" width="400">
