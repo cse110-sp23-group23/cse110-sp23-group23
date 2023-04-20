@@ -46,7 +46,7 @@ Prashasth is a second year Computer Science student in Warren. In his free time,
 
 ### **Aatash Pestonjamasp**, Developer [(GitHub)](https://github.com/AAP127)
 Aatash is a second year Computer Engineering student in Warren college. Outside of classes, he enjoys riding his bike and hanging out with friends.
-<br>
+<img src="./members/aatash.jpg" width="144">
 
 ### **Runpeng Jian**, Developer [(GitHub)](https://github.com/RunpengJ)
 Runpeng is a third year Computer Science Major at Warren College. He likes to do sports, listen to music and watch anime in his spare time.
