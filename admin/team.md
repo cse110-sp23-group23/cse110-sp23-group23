@@ -1,13 +1,8 @@
-<p style="line-height:100px; float: left; font-size: 30px;"> TEAM FORTUNE 500 <p> &nbsp; &nbsp; &nbsp; &nbsp;
-<img src="./branding/teamlogo.png" width="100" height="100">
-
----
-
+# TEAM FORTUNE 500 &emsp; &emsp; &emsp;  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &ensp; <img src="./branding/teamlogo.png" width="75px" height="75px">
 
 <br>
 
 ## About Us:
-
 
 Originally Team #23, we are team **FORTUNE 500**, a team of 10 UC San Diego students in CSE 110 SP23. We are using AGILE methodologies to develop fortune-telling-related web applications. We value collaboration, clear expectations, and a good joke. We believe that some facets of a successful team include ensuring an environment where team members are comfortable to reach out for help, supporting each other's ideas, and treating everyone and their work equally important. We pledge to uphold all the rules established in our [team contract](./misc/rules.md) in our pursuit of software development and engineering.
 <br> <br>
