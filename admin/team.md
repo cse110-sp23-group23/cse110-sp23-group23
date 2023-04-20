@@ -1,11 +1,9 @@
 <div>
-    <h2 style="line-height: 100px; float: left; font-size: 30px;"> TEAM FORTUNE 500 </h2>
-    <div style="text-align: right">
+    <div style="text-align: center">
         <img src="./branding/teamlogo.png" width="100" height="100">
     </div>
 </div> 
 
----
 <br>
 
 ## About Us:
