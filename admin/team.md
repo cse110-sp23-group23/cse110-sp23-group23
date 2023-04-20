@@ -1,8 +1,6 @@
-<div>
-    <div style="text-align: center">
-        <img src="./branding/teamlogo.png" width="100" height="100">
-    </div>
-</div> 
+# Team Fortune 500 &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; <img src="./branding/teamlogo.png" width="100" height="100">
+
+
 
 <br>
 
