@@ -25,6 +25,7 @@ Luke is a 3rd year Math/CS major at Seventh College from Simi Valley, California
 <br>
 
 ### **Eric Vu**, Planner [(GitHub)](https://github.com/air-wickvu)
+<img src="./members/photo-ericvu.jpg" width="144">
 Eric is a 3rd year Computer Engineering Major at Warren College. On his days off he likes to relax on the beach, enjoy live concerts, spending quality time with family and friends. 
 <br>
 
