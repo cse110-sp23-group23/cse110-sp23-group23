@@ -16,7 +16,7 @@ Born in Albany, California, Luke is a 2nd year Math/CS major in Sixth College. W
 <br>
 
 ### **Luke Skerrett**, Leader [(GitHub)](https://github.com/LukeSkerrett)
-<img src="./members/LukeSkerrett_profile.jpeg" width="144">
+<img src="./members/lukeskerrett_profile.jpeg" width="144">
 Luke is a 3rd year Math/CS major at Seventh College from Simi Valley, California. In his free time he loves to play basketball, listen to music, and freestyle rap.
 <br>
 
@@ -52,5 +52,6 @@ Runpeng is a third year Computer Science Major at Warren College. He likes to do
 <br>
 
 ### **Christopher Hashim**, Developer [(GitHub)](https://github.com/chashim39)
-
+<img src="./members/chris.png" width="144" height="195">
+Christopher is a third year Computer Engineering student at Sixth college. He enjoys building computers, video games, and hiking.
 <br>
