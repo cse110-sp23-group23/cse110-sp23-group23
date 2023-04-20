@@ -26,6 +26,8 @@ Eric is a 3rd year Computer Engineering Major at Warren College. On his days off
 <br>
 
 ### **Neel Basu**, Developer [(GitHub)](https://github.com/neel-basu)
+<img src="./members/neel_profile.PNG" width="144px" height="175px">
+
 Neel Basu is a second year Computer Science Major at Marshall College. He enjoys hanging out with his friends, watching movies, and playing volleyball in his free time.
 <br>
 
