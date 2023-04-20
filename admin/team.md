@@ -43,7 +43,7 @@ Aatash is a second year Computer Engineering student in Warren college. Outside 
 <br>
 
 ### **Runpeng Jian**, Developer [(GitHub)](https://github.com/RunpengJ)
-
+Runpeng is a third year Computer Science Major at Warren College. He likes to do sports, listen to music and watch anime in his spare time.
 <br>
 
 ### **Christopher Hashim**, Developer [(GitHub)](https://github.com/chashim39)
