@@ -9,10 +9,10 @@
 - [x] Neel Basu
 - [x] Xiaonan Fu
 - [x] Prashasth Katukojwala
-- [] Eric Vu
+- [ ] Eric Vu
 - [x] Aatash Pestonjamasp
 - [x] Runpeng (Benson) Jian
-- [] Christopher Hashim
+- [ ] Christopher Hashim
 - [x] Marc Baeuerle
 
 ### **Agenda**:
