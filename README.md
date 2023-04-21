@@ -3,6 +3,10 @@
 
 [Permalink](https://github.com/cse110-sp23-group23/cse110-sp23-group23/blob/main/admin/team.md) to team page.
 
+[Google Drive Link](https://drive.google.com/drive/folders/1fS5PbOzavOzqdospdFvvXnRhxirArY-B?usp=sharing) with Google Team Resources.
+
+
+
 We are using AGILE methodologies to develop fortune-telling-related web applications. 
 
 This page will be updated with important links and information as we progress.
