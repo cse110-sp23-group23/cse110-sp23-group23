@@ -23,7 +23,8 @@ Luke is a 3rd year Math/CS major at Seventh College from Simi Valley, California
 
 ### **Marc Baeuerle**, Designer [(GitHub)](https://github.com/MarcBaeuerle)
 <img src="./members/marc.jpg" width="144">
-Marc is a 3rd year Math/CS major in Muir college from Phuket, Thailand. When he's not stuck on assignments you can find him fiddling around with his camera or playinf Dota.
+
+Marc is a 3rd year Math/CS major in Muir college from Phuket, Thailand. When he's not stuck on assignments you can find him fiddling around with his camera or playing Dota.
 <br> <br>
 
 ### **Eric Vu**, Planner [(GitHub)](https://github.com/air-wickvu)
@@ -41,7 +42,7 @@ Neel Basu is a second year Computer Science Major at Marshall College. He enjoys
 ### **Xiaonan Fu**, Developer [(GitHub)](https://github.com/XiaonanFu-ucsd)
 <img src="./members/xiaonan.png" width="144">
 
-Xiaonan is a third year Cognitive Science major at Warren College. He plays the Game Battlefield V a lot and enjoys watching anime. 
+Xiaonan is a third year Cognitive Science major at Warren College. He plays the game Battlefield V a lot and enjoys watching anime. 
 <br> <br>
 
 ### **Prashasth Katukojwala**, Developer [(GitHub)](https://github.com/prashasthk)
