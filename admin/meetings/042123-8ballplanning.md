@@ -23,9 +23,27 @@
     - Slideshow
 
 ### **Future Investigation**:
-- None
+- Initial framework push
+- Plan next meeting
+- Create presentation / working video
 
 ### **Decisions Made (and Reasoning)**:
-- 
+8-Ball
 
-This meeting finished at 1: pm.
+- Decided to use GPT-4 to produce a "working" framework for our 8 ball.
+
+Main Programmers (3 - 5 people): 
+1. Luke Sheltraw
+2. Marc Baeuerle
+3. Xiaonan Fu 
+4. ... 
+5. ...
+
+Programmers will work on features and put their information on a working google docs (screenshots, bullet points, **rough**)
+
+- Everyone else will do the logistical aspects / presentation / minor tinkering with CHATgpt
+- They will put together a cohesive presentation highlighting chat GPTS usage.
+
+Created a google drive folder to store important info regarding first project (slides + gpt discovery doc)
+
+This meeting finished at 3:00pm.
