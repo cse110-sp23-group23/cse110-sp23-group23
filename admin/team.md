@@ -39,6 +39,7 @@ Neel Basu is a second year Computer Science Major at Marshall College. He enjoys
 <br> <br>
 
 ### **Xiaonan Fu**, Developer [(GitHub)](https://github.com/XiaonanFu-ucsd)
+<img src="./members/xiaonan.png" width="144">
 
 Xiaonan is a third year Cognitive Science major at Warren College. He plays the Game Battlefield V a lot and enjoys watching anime. 
 <br> <br>
