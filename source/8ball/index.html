@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Team 23, CSE 110 UCSD SP23">
+    <meta name="description" content="A magic 8 ball to fit all your needs. Ask me a question, but only if you're ready for the answer.">
+    <meta name="keywords" content="magic, 8, ball, answer, question, fortune telling">
+    <title>Magic 8 Ball</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <h1>Magic 8-Ball</h1>
+        <div class="eight-ball">
+            <div class="lightning atime"></div>
+            <div class="lightning atime"></div>
+            <div class="lightning btime"></div>
+            <div class="lightning btime"></div>
+            <div class="message-container">
+                <span class="message"></span>
+            </div>
+        </div>
+        <div class="input-container">
+            <textarea class="question-input" placeholder="Ask a question..." rows="5" cols="30"></textarea>
+            <button class="submit-btn">Ask the Magic 8-Ball</button>
+        </div>
+    </div>
+    <script src="scripts/8ball.js"></script>
+    <script src="scripts/lightning.js"></script>
+</body>
+</html>
