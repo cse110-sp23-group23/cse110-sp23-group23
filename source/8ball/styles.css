@@ -1,6 +1,20 @@
+body::before {
+    z-index: -1;
+    content: "";
+    background-image: url('assets/background.jpg');
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.65;
+}
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #F2F2F2;
+    background: rgb(131,142,199);
+    background-image: radial-gradient(circle, rgba(131,142,199,1) 0%, rgba(177,173,255,0.4234068627450981) 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,6 +25,7 @@ body {
 
 h1 {
     text-align: center;
+    color: white;
 }
 
 .eight-ball {
@@ -23,22 +38,29 @@ h1 {
 }
 
 .message-container {
-    position: absolute;
-    top: 50%;
+    position: relative;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80%;
-    height: 50%;
+    width: 55%;
+    height: 55%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
-    border-radius: 3px;
+    background: linear-gradient(51deg, #1f7cb6, #1f39b6);
+    background-size: 400% 400%;
+    animation: blue-triangle-animation 4s ease infinite;
+    overflow-wrap: break-word;
+    clip-path: polygon(50% 75%, 0% 0%, 100% 0%);
 }
 
 .message {
+    text-align: center;
+    width: 60%;
+    position: absolute;
+    top: 0px;
     font-size: 18px;
-    color: #000;
+    color: white;
 }
 
 .input-container {
@@ -49,7 +71,6 @@ h1 {
 }
   
 .question-input {
-    width: 70%;
     padding: 10px;
     border-radius: 3px;
     border: 1px solid #ccc;
@@ -124,5 +145,18 @@ h1 {
     }
     92%, 94%, 96%, 98% {
         opacity: 1;
+    }
+}
+
+/* Triangle blue animation */
+@keyframes blue-triangle-animation {
+    0% {
+        background-position:0% 74%;
+    }
+    50% {
+        background-position:100% 27%;
+    }
+    100% {
+        background-position:0% 74%;
     }
 }
