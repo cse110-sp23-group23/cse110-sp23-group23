@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic 8-Ball</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Magic 8-Ball</h1>
+        <div class="eight-ball">
+            <div class="lightning atime"></div>
+            <div class="lightning atime"></div>
+            <div class="lightning btime"></div>
+            <div class="lightning btime"></div>
+            <div class="message-container">
+                <span class="message"></span>
+            </div>
+        </div>
+        <div class="input-container">
+            <textarea class="question-input" placeholder="Ask a question..." rows="5" cols="30"></textarea>
+            <button class="submit-btn">Ask the Magic 8-Ball</button>
+        </div>
+    </div>
+    <script src="scripts/8ball.js" type="text/javascript"></script>
+    <script src="scripts/lightning.js" type="text/javascript"></script>
+</body>
+</html>
