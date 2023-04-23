@@ -3,7 +3,10 @@ const submitBtn = document.querySelector('.submit-btn');
 const questionInput = document.querySelector('.question-input');
 const message = document.querySelector('.message');
 const eightBall = document.querySelector('.eight-ball');
+const ttsToggle = document.querySelector('#tts-button');
+
 const sessionDate = new Date();
+const msg = new SpeechSynthesisUtterance();
 
 // Dictionary of possible response for 8Ball
 const responses = [
@@ -66,11 +69,49 @@ function triggerResponse() {
     if (questionInput.value.trim()) { // if user asked a question
         shakeBall();
         setTimeout(() => {
-            message.textContent = generateResponse(questionInput.value.trim());
-        }, 600);
+            let output = generateResponse(questionInput.value.trim());
+            message.textContent = output;
+            
+
+            textToSpeech(output);
+
+
+
+        }, randomTime());
     } else { // if user left input empty
         message.textContent = "Please ask a question!";
     }
+}
+
+/**
+ * Function that generates a random time interval 
+ * between 500ms and 1500ms
+ * @author Marc Baeuerle
+ * @param   none    
+ * @returns {int}   time in miliseconds
+ */
+function randomTime() {
+    let time = Math.random() * (1500 - 500) + 500;
+    return time;
+}
+
+
+/**
+ * Text to speech that reads input in 
+ * 'US English Male' voice
+ * @author  Marc Baeuerle
+ * @param   {String}    text    Text to be read
+ * @returns none
+ */
+function textToSpeech(text) {
+    if (!ttsToggle.checked) {
+        return;
+    }
+    msg.text = text;
+    msg.rate = 0.9;     //speed of speech
+    msg.voice = speechSynthesis.getVoices().find(voice => voice.name === 'Google US English Male');
+    speechSynthesis.speak(msg);
+    return;
 }
 
 // Button clicked
