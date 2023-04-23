@@ -113,7 +113,7 @@ function shakeBall(length) {
  * @returns none    
  */
 function triggerResponse() {
-    let time = randomTime(minValueInput.value, 
+    let time = randomTime(parseInt(minValueInput.value), 
         parseInt(minValueInput.value) + parseInt(rangeValueInput.value)); // fetch current vals of timing input
     if (questionInput.value.trim()) { // if user asked a question
         shakeBall(time);
