@@ -6,6 +6,8 @@ const eightBall = document.querySelector('.eight-ball');
 const positivityValue = document.getElementById('');
 const radioButtons = document.getElementsByName('positivity-index');
 const ttsToggle = document.querySelector('#tts-button');
+const minValueInput = document.getElementById("min-value-timing");
+const rangeValueInput = document.getElementById("range-value-timing");
 
 // Objects
 const sessionDate = new Date();
@@ -84,7 +86,7 @@ function shakeBall(length) {
 
 // Trigger shakeBall() function on click of submit button of enter press
 function triggerResponse() {
-    let time = randomTime();
+    let time = randomTime(minValueInput.value, parseInt(minValueInput.value) + parseInt(rangeValueInput.value));
     if (questionInput.value.trim()) { // if user asked a question
         shakeBall(time);
         setTimeout(() => {
@@ -105,14 +107,14 @@ function triggerResponse() {
 
 /**
  * Function that generates a random time interval 
- * between 500ms and 1500ms
- * @author Marc Baeuerle
- * @param   none    
+ * between low and high
+ * @author Marc Baeuerle, Luke Sheltraw
+ * @param   {int} low   minimum reachable value in ms
+ * @param   {int} high  maximum reachable value in ms 
  * @returns {int}   time in miliseconds
  */
-function randomTime() {
-    let time = Math.random() * (1500 - 500) + 500;
-    return time;
+function randomTime(low, high) {
+    return Math.random() * (high - low) + low;
 }
 
 
@@ -134,13 +136,16 @@ function textToSpeech(text) {
     return;
 }
 
-// Button clicked
+/**
+ * Event listeners to trigger response when button or enter key clicked 
+ * @author  Luke Sheltraw
+ * @param   none    takes keyboard/mouse input
+ * @returns none    full response on screen through triggerResponse()
+ */
 submitBtn.addEventListener('click', triggerResponse);
-
-// Enter key pressed
 questionInput.addEventListener('keydown', (event) => {
-    if (event.keyCode == 13) {
+    if (event.keyCode == 13) { // enter key
         triggerResponse();
-        document.activeElement.blur();
+        document.activeElement.blur(); // lose focus on text box
     }
 });
