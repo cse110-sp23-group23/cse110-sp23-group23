@@ -41,6 +41,13 @@ h1 {
     overflow: hidden;
 }
 
+#options{
+    position: fixed;
+    z-index: inf;
+    top: 0;
+    left: 10px;
+}
+
 .message-container {
     position: relative;
     top: 60%;

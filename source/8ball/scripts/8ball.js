@@ -5,7 +5,11 @@ const message = document.querySelector('.message');
 const eightBall = document.querySelector('.eight-ball');
 const positivityValue = document.getElementById('');
 const radioButtons = document.getElementsByName('positivity-index');
+const ttsToggle = document.querySelector('#tts-button');
+
+// Objects
 const sessionDate = new Date();
+const msg = new SpeechSynthesisUtterance();
 
 const goodIndexEnd = 15;
 const badIndexStart = 10;
@@ -89,11 +93,44 @@ function triggerResponse() {
                     bias = radioButtons[i].value;
                 }
             }
-            message.textContent = generateResponse(questionInput.value.trim(), bias);
-        }, 600);
+            let output = generateResponse(questionInput.value.trim(), bias);
+            message.textContent = output;
+            textToSpeech(output);
+        }, randomTime());
     } else { // if user left input empty
         message.textContent = "Please ask a question!";
     }
+}
+
+/**
+ * Function that generates a random time interval 
+ * between 500ms and 1500ms
+ * @author Marc Baeuerle
+ * @param   none    
+ * @returns {int}   time in miliseconds
+ */
+function randomTime() {
+    let time = Math.random() * (1500 - 500) + 500;
+    return time;
+}
+
+
+/**
+ * Text to speech that reads input in 
+ * 'US English Male' voice
+ * @author  Marc Baeuerle
+ * @param   {String}    text    Text to be read
+ * @returns none    just reads out text
+ */
+function textToSpeech(text) {
+    if (!ttsToggle.checked) {
+        return;
+    }
+    msg.text = text;
+    msg.rate = 0.9;     //speed of speech
+    msg.voice = speechSynthesis.getVoices().find(voice => voice.name === 'Google US English Male');
+    speechSynthesis.speak(msg);
+    return;
 }
 
 // Button clicked
@@ -105,4 +142,4 @@ questionInput.addEventListener('keydown', (event) => {
         triggerResponse();
         document.activeElement.blur();
     }
-})
+});
