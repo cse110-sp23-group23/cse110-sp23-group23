@@ -3,8 +3,12 @@ const submitBtn = document.querySelector('.submit-btn');
 const questionInput = document.querySelector('.question-input');
 const message = document.querySelector('.message');
 const eightBall = document.querySelector('.eight-ball');
+const positivityValue = document.getElementById('');
+const radioButtons = document.getElementsByName('positivity-index');
 const sessionDate = new Date();
 
+const goodIndexEnd = 15;
+const badIndexStart = 10;
 // Dictionary of possible response for 8Ball
 const responses = [
     "It is certain",
@@ -41,10 +45,23 @@ function hash(input) {
     return hash;
 }
  
-// Pick a seeded response from dictionary list based on string hash and current time
-function generateResponse(input) {
+// Pick a seeded response from dictionary list based on string hash, current time, and bias
+function generateResponse(input, bias) {
     const hashVal = hash(input) * sessionDate.getHours();
-    const index = (hashVal % responses.length + responses.length) % responses.length; // twice mod to avoid negative
+    let index;
+    switch (bias) {        
+        case "1": // 0 to goodIndexEnd
+            index = (hashVal % goodIndexEnd + goodIndexEnd) % goodIndexEnd;
+            break;
+        case "-1": // badIndexStart to length
+            index = (hashVal % (responses.length - badIndexStart) + 
+                (responses.length - badIndexStart)) % ((responses.length - badIndexStart)) + badIndexStart;
+            break;
+        case "0": // all
+        default:
+            index = (hashVal % responses.length + responses.length) % responses.length;
+            break;
+    }
     return responses[index];
 }
     
@@ -66,7 +83,13 @@ function triggerResponse() {
     if (questionInput.value.trim()) { // if user asked a question
         shakeBall();
         setTimeout(() => {
-            message.textContent = generateResponse(questionInput.value.trim());
+            let bias = 0;
+            for (let i = 0; i < radioButtons.length; i++) {
+                if (radioButtons[i].checked) {
+                    bias = radioButtons[i].value;
+                }
+            }
+            message.textContent = generateResponse(questionInput.value.trim(), bias);
         }, 600);
     } else { // if user left input empty
         message.textContent = "Please ask a question!";

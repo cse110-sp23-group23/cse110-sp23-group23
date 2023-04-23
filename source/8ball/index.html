@@ -8,6 +8,7 @@
     <meta name="keywords" content="magic, 8, ball, answer, question, fortune telling">
     <title>Magic 8 Ball</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="popup.css">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
 <body>
@@ -27,7 +28,22 @@
             <button class="submit-btn">Ask the Magic 8 Ball</button>
         </div>
     </div>
+
+	<div class="popup" id="popup">
+		<span id="close-button">X</span>
+		<p>Welcome to the Magic 8 Ball!</p>
+        <p>Response Bias:</p>
+        <input type="radio" name="positivity-index" value="-1" id="neg">
+        <label for="neg">Negative</label>
+        <input type="radio" name="positivity-index" value="0" id="neut" checked>
+        <label for="neut">None</label>
+        <input type="radio" name="positivity-index" value="1" id="pos">
+        <label for="pos">Positive</label>
+	</div>
+    <img src="assets/settings.png" id="open-button">
+
     <script src="scripts/8ball.js"></script>
     <script src="scripts/lightning.js"></script>
+    <script src="scripts/popup.js"></script>
 </body>
 </html>
