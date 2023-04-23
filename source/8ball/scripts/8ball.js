@@ -13,8 +13,10 @@ const rangeValueInput = document.getElementById("range-value-timing");
 const sessionDate = new Date();
 const msg = new SpeechSynthesisUtterance();
 
+// Indices where good/bad responses start/end in following dict
 const goodIndexEnd = 15;
 const badIndexStart = 10;
+
 // Dictionary of possible response for 8Ball
 const responses = [
     "It is certain",
@@ -39,7 +41,12 @@ const responses = [
     "Very doubtful"
 ];
 
-// Hash code generator for string 
+/**
+ * Return hash code of input string
+ * @author Luke Sheltraw
+ * @param {string} input    input string
+ * @returns {int}           hash of the string
+ */
 function hash(input) {
     let hash = 0;
     if (input.length == 0) return hash;
@@ -51,7 +58,13 @@ function hash(input) {
     return hash;
 }
  
-// Pick a seeded response from dictionary list based on string hash, current time, and bias
+/**
+ * Pick a seeded response from dictionary list based on string hash, current time, and bias
+ * @author Luke Sheltraw
+ * @param {string} input    question asked in text field
+ * @param {int} bias        1 represents positive, 0 neutral, and -1 negative
+ * @returns {string}        string representing the message to be printed to the 8ball
+ */
 function generateResponse(input, bias) {
     const hashVal = hash(input) * sessionDate.getHours();
     let index;
@@ -71,12 +84,21 @@ function generateResponse(input, bias) {
     return responses[index];
 }
     
-// Clear the message when focusing on the input field
+/**
+ * Clear the printed message when focusing on the input field
+ * @author Luke Sheltraw
+ * @returns none
+ */
 questionInput.addEventListener('focus', () => {
     message.textContent = '';
 });
 
-// Trigger shake animation on button click
+/**
+ * Uses CSS to shake ball for a given amount of time
+ * @author Luke Sheltraw
+ * @param   {int} length    length of time in ms to shake ball
+ * @returns none            displays behavior on screen
+ */
 function shakeBall(length) {
     eightBall.style.animation = `shake ${length}ms linear 1`;
     setTimeout(() => {
@@ -84,21 +106,27 @@ function shakeBall(length) {
     }, length);
 }
 
-// Trigger shakeBall() function on click of submit button of enter press
+/**
+ * Produce a random time, check current bias status, and print/speak 
+ * generated response if question is validated
+ * @author  Luke Sheltraw
+ * @returns none    
+ */
 function triggerResponse() {
-    let time = randomTime(minValueInput.value, parseInt(minValueInput.value) + parseInt(rangeValueInput.value));
+    let time = randomTime(minValueInput.value, 
+        parseInt(minValueInput.value) + parseInt(rangeValueInput.value)); // fetch current vals of timing input
     if (questionInput.value.trim()) { // if user asked a question
         shakeBall(time);
         setTimeout(() => {
             let bias = 0;
-            for (let i = 0; i < radioButtons.length; i++) {
+            for (let i = 0; i < radioButtons.length; i++) { // fetch current val of bias radio buttons
                 if (radioButtons[i].checked) {
                     bias = radioButtons[i].value;
                 }
             }
-            let output = generateResponse(questionInput.value.trim(), bias);
-            message.textContent = output;
-            textToSpeech(output);
+            let output = generateResponse(questionInput.value.trim(), bias); // pick response
+            message.textContent = output; // print response
+            textToSpeech(output); // say response
         }, time);
     } else { // if user left input empty
         message.textContent = "Please ask a question!";
@@ -108,10 +136,10 @@ function triggerResponse() {
 /**
  * Function that generates a random time interval 
  * between low and high
- * @author Marc Baeuerle, Luke Sheltraw
+ * @author  Marc Baeuerle, Luke Sheltraw
  * @param   {int} low   minimum reachable value in ms
  * @param   {int} high  maximum reachable value in ms 
- * @returns {int}   time in miliseconds
+ * @returns {int}       time in miliseconds
  */
 function randomTime(low, high) {
     return Math.random() * (high - low) + low;
@@ -122,8 +150,8 @@ function randomTime(low, high) {
  * Text to speech that reads input in 
  * 'US English Male' voice
  * @author  Marc Baeuerle
- * @param   {String}    text    Text to be read
- * @returns none    just reads out text
+ * @param   {String} text   text to be read
+ * @returns none            just reads out text
  */
 function textToSpeech(text) {
     if (!ttsToggle.checked) {
@@ -139,7 +167,6 @@ function textToSpeech(text) {
 /**
  * Event listeners to trigger response when button or enter key clicked 
  * @author  Luke Sheltraw
- * @param   none    takes keyboard/mouse input
  * @returns none    full response on screen through triggerResponse()
  */
 submitBtn.addEventListener('click', triggerResponse);
