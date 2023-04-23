@@ -75,17 +75,18 @@ questionInput.addEventListener('focus', () => {
 });
 
 // Trigger shake animation on button click
-function shakeBall() {
-    eightBall.classList.add('shake');
+function shakeBall(length) {
+    eightBall.style.animation = `shake ${length}ms linear 1`;
     setTimeout(() => {
-        eightBall.classList.remove('shake');
-    }, 600);
+        eightBall.style.animation = 'none';
+    }, length);
 }
 
 // Trigger shakeBall() function on click of submit button of enter press
 function triggerResponse() {
+    let time = randomTime();
     if (questionInput.value.trim()) { // if user asked a question
-        shakeBall();
+        shakeBall(time);
         setTimeout(() => {
             let bias = 0;
             for (let i = 0; i < radioButtons.length; i++) {
@@ -96,7 +97,7 @@ function triggerResponse() {
             let output = generateResponse(questionInput.value.trim(), bias);
             message.textContent = output;
             textToSpeech(output);
-        }, randomTime());
+        }, time);
     } else { // if user left input empty
         message.textContent = "Please ask a question!";
     }

@@ -41,13 +41,6 @@ h1 {
     overflow: hidden;
 }
 
-#options{
-    position: fixed;
-    z-index: inf;
-    top: 0;
-    left: 10px;
-}
-
 .message-container {
     position: relative;
     top: 60%;
@@ -95,6 +88,10 @@ h1 {
     border-radius: 3px;
     background-color: #007BFF;
     color: #fff;
+    cursor: pointer;
+}
+
+.popup > input:hover, .popup > label:hover {
     cursor: pointer;
 }
   
@@ -162,12 +159,12 @@ h1 {
 /* Triangle blue animation */
 @keyframes blue-triangle-animation {
     0% {
-        background-position:0% 74%;
+        background-position: 0% 74%;
     }
     50% {
-        background-position:100% 27%;
+        background-position: 100% 27%;
     }
     100% {
-        background-position:0% 74%;
+        background-position: 0% 74%;
     }
 }
