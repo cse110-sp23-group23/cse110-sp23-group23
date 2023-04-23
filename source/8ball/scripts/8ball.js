@@ -6,8 +6,10 @@ const eightBall = document.querySelector('.eight-ball');
 const positivityValue = document.getElementById('');
 const radioButtons = document.getElementsByName('positivity-index');
 const ttsToggle = document.querySelector('#tts-button');
+const soundToggle = document.querySelector('#sound-button');
 const minValueInput = document.getElementById("min-value-timing");
 const rangeValueInput = document.getElementById("range-value-timing");
+const audioElement = document.getElementById("audio");
 
 // Objects
 const sessionDate = new Date();
@@ -39,6 +41,13 @@ const responses = [
     "My sources say no",
     "Outlook not so good",
     "Very doubtful"
+];
+
+const audioFiles = [
+    "assets/thunder.wav",
+    "assets/thunder2.wav",
+    "assets/thunder3.wav",
+    "assets/thunder4.wav"
 ];
 
 /**
@@ -100,6 +109,11 @@ questionInput.addEventListener('focus', () => {
  * @returns none            displays behavior on screen
  */
 function shakeBall(length) {
+    if (soundToggle.checked) {
+        const audioIndex = Math.floor(Math.random() * 4);
+        audioElement.src = audioFiles[audioIndex];
+        audioElement.play();
+    }
     eightBall.style.animation = `shake ${length}ms linear 1`;
     setTimeout(() => {
         eightBall.style.animation = 'none';

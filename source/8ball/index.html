@@ -46,6 +46,8 @@
         <p>Audio:</p>
             <input type="checkbox" id="tts-button">
             <label for="tts-button">Text to Speech</label>
+            <input type="checkbox" id="sound-button" checked>
+            <label for="sound-button">8-Ball Sound</label>
         </section>
         <hr>
         <section>
@@ -56,6 +58,7 @@
             <input type="number" id="range-value-timing" min="0" max="2000" value="1000" step="1">
         </section>
 	</div>
+    <audio id="audio"></audio>
     <img src="assets/settings.png" id="open-button" alt="settings icon">
 
     <script src="scripts/8ball.js"></script>
