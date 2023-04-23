@@ -101,7 +101,7 @@ function randomTime() {
  * 'US English Male' voice
  * @author  Marc Baeuerle
  * @param   {String}    text    Text to be read
- * @returns none
+ * @returns none    just reads out text
  */
 function textToSpeech(text) {
     if (!ttsToggle.checked) {
