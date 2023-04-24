@@ -1,6 +1,7 @@
 // Page selectors
 const closeButton = document.getElementById('close-button');
 const openButton = document.getElementById('open-button');
+const popup = document.getElementById("popup");
 
 /**
  * Display popup to screen, and remap control of buttons to close it
@@ -9,9 +10,7 @@ const openButton = document.getElementById('open-button');
  */
 function openPopup() {
 	openButton.classList.add('clicked');
-	document.getElementById("popup").style.display = "block";
-	openButton.removeEventListener('click', openPopup);
-	openButton.addEventListener('click', closePopup);
+	popup.style.display = "block";
 }
 
 /**
@@ -21,11 +20,28 @@ function openPopup() {
  */
 function closePopup() {
 	openButton.classList.remove('clicked');
-	document.getElementById("popup").style.display = "none";
-	openButton.removeEventListener('click', closePopup);
-	openButton.addEventListener('click', openPopup);
+	popup.style.display = "none";
+}
+
+/**
+ * Toggle display of popup by calling respective open/close function
+ * based on current values
+ * @author Luke Sheltraw
+ * @returns none
+ */
+function togglePopup() {
+	if (popup.style.display == "block") {
+		closePopup();
+	} else {
+		openPopup();
+	}
 }
 
 // Event listeners to trigger above calls
 closeButton.addEventListener('click', closePopup);
-openButton.addEventListener('click', openPopup);
+openButton.addEventListener('click', togglePopup);
+document.addEventListener('keydown', (event) => {
+    if (event.keyCode == 27) { // esc key
+        togglePopup();
+    }
+});

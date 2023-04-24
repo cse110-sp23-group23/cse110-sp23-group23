@@ -1,15 +1,17 @@
 .popup {
+    display: none;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 300px;
     height: 400px;
-    background-color: #fff;
+    background-color: #f7f2e6;
     border: 1px solid #000;
     box-shadow: 0px 0px 10px #000;
     padding: 20px;
-    display: none;
+    z-index: 99;
+    font-family: Stalker;
 }
 
 .popup #close-button {
@@ -20,10 +22,24 @@
     font-size: 20px;
     color: #000;
     cursor: pointer;
+    font-family: fantasy, monospace;
+    margin: 10px;
 }
 
 .popup input[type="radio"], .popup input[type="checkbox"] {
     cursor: pointer;
+}
+
+.popup input[type="number"], .popup select {
+    background-color: lightgray;
+    border: none;
+    border-radius: 3px;
+    height: 17px;
+    color: #282727;
+}
+
+.popup input {
+    accent-color: #1427fd;
 }
 
 #open-button {
@@ -39,4 +55,8 @@
 
 #open-button.clicked {
     transform: rotate(90deg);
+}
+
+#tts-menu {
+    margin-top: 10px;
 }

@@ -6,8 +6,12 @@ const eightBall = document.querySelector('.eight-ball');
 const positivityValue = document.getElementById('');
 const radioButtons = document.getElementsByName('positivity-index');
 const ttsToggle = document.querySelector('#tts-button');
-const minValueInput = document.getElementById("min-value-timing");
+const medianValueInput = document.getElementById("median-value-timing");
 const rangeValueInput = document.getElementById("range-value-timing");
+const lightningBolts = document.getElementsByClassName("lightning");
+
+// Constants
+const animationLengthMs = 750; // length of ball shaking animation in milliseconds
 
 // Objects
 const sessionDate = new Date();
@@ -66,7 +70,7 @@ function hash(input) {
  * @returns {string}        string representing the message to be printed to the 8ball
  */
 function generateResponse(input, bias) {
-    const hashVal = hash(input) * sessionDate.getHours();
+    const hashVal = hash(input) * sessionDate.getHours() * 37;
     let index;
     switch (bias) {        
         case "1": // 0 to goodIndexEnd
@@ -83,15 +87,6 @@ function generateResponse(input, bias) {
     }
     return responses[index];
 }
-    
-/**
- * Clear the printed message when focusing on the input field
- * @author Luke Sheltraw
- * @returns none
- */
-questionInput.addEventListener('focus', () => {
-    message.textContent = '';
-});
 
 /**
  * Uses CSS to shake ball for a given amount of time
@@ -100,9 +95,17 @@ questionInput.addEventListener('focus', () => {
  * @returns none            displays behavior on screen
  */
 function shakeBall(length) {
-    eightBall.style.animation = `shake ${length}ms linear 1`;
+    for (let i = 0; i < lightningBolts.length; i++) {
+        lightningBolts[i].classList.add('lightning-violent');
+    }
+    eightBall.style.animation = `shake ${animationLengthMs}ms ease-out ${length / animationLengthMs}`;
+    questionInput.disabled = true;
     setTimeout(() => {
         eightBall.style.animation = 'none';
+        for (let i = 0; i < lightningBolts.length; i++) {
+            lightningBolts[i].classList.remove('lightning-violent');
+        }
+        questionInput.disabled = false;
     }, length);
 }
 
@@ -113,8 +116,11 @@ function shakeBall(length) {
  * @returns none    
  */
 function triggerResponse() {
-    let time = randomTime(parseInt(minValueInput.value), 
-        parseInt(minValueInput.value) + parseInt(rangeValueInput.value)); // fetch current vals of timing input
+    message.textContent = '';
+    let medianTime = parseInt(medianValueInput.value);
+    let rangeTime = parseInt(rangeValueInput.value);
+    let time = Math.ceil(randomTime(medianTime - (rangeTime / 2), medianTime + (rangeTime / 2))
+        / animationLengthMs) * animationLengthMs; // fetch current vals of timing input and round to multiple of animation length
     if (questionInput.value.trim()) { // if user asked a question
         shakeBall(time);
         setTimeout(() => {
@@ -145,11 +151,27 @@ function randomTime(low, high) {
     return Math.random() * (high - low) + low;
 }
 
+/**
+ * For use with textToSpeech(), repeatedly attempts to load voices 
+ * list until success
+ * @author Luke Sheltraw
+ * @returns none    side-effect of modifying voices array with new vals
+ */
+let voices = [];
+function populateVoiceList() {
+    voices = speechSynthesis.getVoices();
+    if (voices.length == 0) {
+        setTimeout(populateVoiceList, 100);
+    }
+}
+
+// Update list on change
+speechSynthesis.onvoiceschanged = populateVoiceList;
 
 /**
  * Text to speech that reads input in 
- * 'US English Male' voice
- * @author  Marc Baeuerle
+ * currently selected voice
+ * @author  Marc Baeuerle, Luke Sheltraw
  * @param   {String} text   text to be read
  * @returns none            just reads out text
  */
@@ -157,22 +179,28 @@ function textToSpeech(text) {
     if (!ttsToggle.checked) {
         return;
     }
+    let msg = new SpeechSynthesisUtterance();
     msg.text = text;
-    msg.rate = 0.9;     //speed of speech
-    msg.voice = speechSynthesis.getVoices().find(voice => voice.name === 'Google US English Male');
+    msg.rate = 0.9; // speed of speech
+    let selectedVoice = voices.find(voice => voice.name === document.getElementById('dropdown').value);
+    if (selectedVoice) {
+        msg.voice = selectedVoice;
+    } else {
+        console.warn("Selected voice not available. Using default voice.");
+    }
     speechSynthesis.speak(msg);
     return;
 }
 
 /**
- * Event listeners to trigger response when button or enter key clicked 
+ * Event listeners to trigger response when button, ball, or enter key clicked 
  * @author  Luke Sheltraw
  * @returns none    full response on screen through triggerResponse()
  */
 submitBtn.addEventListener('click', triggerResponse);
+eightBall.addEventListener('click', triggerResponse);
 questionInput.addEventListener('keydown', (event) => {
     if (event.keyCode == 13) { // enter key
         triggerResponse();
-        document.activeElement.blur(); // lose focus on text box
     }
 });

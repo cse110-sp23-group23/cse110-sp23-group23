@@ -1,5 +1,5 @@
 // Page selectors
-const lightning = document.querySelector('.lightning');
+const lightning = document.querySelectorAll('.lightning');
 
 /**
  * Each time the lightning animation triggers, rotate the image by random value
@@ -11,12 +11,12 @@ function getRandomAngle() {
 }
 
 /**
- * Each time the lightning animation triggers, rotate the image by random value
+ * Each time the lightning animation triggers, rotate the images by random value
  * @author Luke Sheltraw
  * @returns none
  */
-lightning.addEventListener('animationiteration', () => {
-    const angle = getRandomAngle();
-    lightning.style.transform = `translate(-50%, -50%) rotate(${angle}deg)`;
-});
-    
+for (let i = 0; i < lightning.length; i++) {
+    lightning[i].addEventListener('animationiteration', () => {
+            lightning[i].style.transform = `translate(-50%, -50%) rotate(${getRandomAngle()}deg)`;
+    });
+}

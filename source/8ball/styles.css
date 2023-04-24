@@ -1,3 +1,13 @@
+@font-face {
+    font-family: Leopold;
+    src: url(assets/Leopold.otf);
+}
+
+@font-face {
+    font-family: Stalker;
+    src: url(assets/stalker1.ttf);
+}
+
 body::before {
     z-index: -1;
     content: "";
@@ -22,23 +32,47 @@ body {
     padding: 0;
 }
 
-body, textarea {
-    font-family: sans-serif;
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 h1 {
-    font-size: 35pt;
+    font-size: 40pt;
     text-align: center;
-    color: white;
+    color: #f7f2e6;
 }
+
+.eight-ball:before {
+    content: "";
+    position: absolute;
+    top: 1%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    background: radial-gradient(circle at 50% 0px, #696969, rgba(255, 255, 255, 0) 50%);
+    filter: blur(5px);
+    z-index: 2;
+  }
 
 .eight-ball {
     width: 300px;
     height: 300px;
-    background-color: #000;
+    background: radial-gradient(circle at 100px 100px, #3b3b3b, #000);
     border-radius: 50%;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
+}
+
+#settings-title {
+    margin-top: 0;
+}
+
+h1, #settings-title {
+    font-family: Leopold;
 }
 
 .message-container {
@@ -51,7 +85,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(51deg, #1f7cb6, #1f39b6);
+    background: radial-gradient(circle at 100px 100px, #1427fd, #000);
     background-size: 400% 400%;
     animation: blue-triangle-animation 4s ease infinite;
     overflow-wrap: break-word;
@@ -60,11 +94,15 @@ h1 {
 
 .message {
     text-align: center;
-    width: 60%;
+    width: 57%;
     position: absolute;
     top: 0px;
-    font-size: 18px;
-    color: white;
+    font-size: 17px;
+    color: #f7f2e6;
+}
+
+input, textarea, .message, button {
+    font-family: Stalker, monospace;
 }
 
 .input-container {
@@ -79,15 +117,17 @@ h1 {
     border-radius: 3px;
     border: 1px solid #ccc;
     resize: none;
+    background-color: #f7f2e6;    
 }
   
 .submit-btn {
+    width: 100%;
     padding: 10px;
     margin-top: 10px;
     border: none;
     border-radius: 3px;
-    background-color: #007BFF;
-    color: #fff;
+    background-color: #1427fd;
+    color: #f7f2e6;
     cursor: pointer;
 }
 
@@ -111,6 +151,11 @@ h1 {
     animation-iteration-count: infinite;
 }
 
+.lightning-violent {
+    filter: brightness(0) saturate(100%) invert(11%) sepia(83%) saturate(6565%) hue-rotate(238deg) brightness(101%) contrast(128%);
+    animation-duration: 0.5s;
+}
+
 /* Two different durations to create offset strikes */
 .lightning.atime {
     animation-duration: 1s;    
@@ -119,33 +164,31 @@ h1 {
     animation-duration: 1.7s;   
 }
 
-/* Trigger shake animation for 8-ball */
-.eight-ball.shake {
-    animation: shake 0.6s linear 1;
-}
-
 /* Definition of shake animation for 8-ball */
 @keyframes shake {
     0% {
-        transform: rotate(0);
+        transform: rotate(0) scale(1.0);
     }
     20% {
-        transform: rotate(-3deg);
+        transform: rotate(-6deg) scale(1.05);
     }
     40% {
-        transform: rotate(3deg);
+        transform: rotate(6deg) scale(1.0);
     }
     60% {
-        transform: rotate(-3deg);
+        transform: rotate(-6deg) scale(1.05);
     }
     80% {
-        transform: rotate(3deg);
+        transform: rotate(4.5deg) scale(1.0);
+    }
+    90% {
+        transform: rotate(0) scale(1.0);
     }
     100% {
-        transform: rotate(0);
+        transform: rotate(0) scale(1.0);
     }
 }
-  
+
 /* Definition of flicker animation for lightning bolts */
 @keyframes lightning {
     0%, 90%, 100% {
