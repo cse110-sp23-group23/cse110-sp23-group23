@@ -14,7 +14,6 @@ const lightningBolts = document.getElementsByClassName("lightning");
 const animationLengthMs = 750; // length of ball shaking animation in milliseconds
 
 // Objects
-const sessionDate = new Date();
 const msg = new SpeechSynthesisUtterance();
 
 // Indices where good/bad responses start/end in following dict
@@ -70,7 +69,7 @@ function hash(input) {
  * @returns {string}        string representing the message to be printed to the 8ball
  */
 function generateResponse(input, bias) {
-    const hashVal = hash(input) * sessionDate.getHours() * 37;
+    const hashVal = hash(input);
     let index;
     switch (bias) {        
         case "1": // 0 to goodIndexEnd
