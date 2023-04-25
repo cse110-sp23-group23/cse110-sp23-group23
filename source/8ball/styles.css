@@ -42,6 +42,7 @@ h1 {
     font-size: 40pt;
     text-align: center;
     color: #f7f2e6;
+    text-shadow: 0 0 5px black;
 }
 
 .eight-ball:before {
@@ -65,6 +66,7 @@ h1 {
     position: relative;
     overflow: hidden;
     cursor: pointer;
+    box-shadow: 0 0 5px black;
 }
 
 #settings-title {
@@ -73,6 +75,10 @@ h1 {
 
 h1, #settings-title {
     font-family: Leopold;
+}
+
+span.copy {
+    font-family: sans-serif;
 }
 
 .message-container {
@@ -118,6 +124,23 @@ input, textarea, .message, button {
     border: 1px solid #ccc;
     resize: none;
     background-color: #f7f2e6;    
+    box-shadow: 0px 0px 5px black;
+    transition: all 0.25s ease-out 0s;
+}
+
+.question-input, .submit-btn {
+    outline: none;
+}
+
+.question-input:focus, .question-input:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 10px black;
+}
+ 
+.submit-btn:hover {
+    transition: all 0.25s ease-out 0s;
+    transform: scale(1.02);
+    box-shadow: 0px 0px 5px black;
 }
   
 .submit-btn {
@@ -129,12 +152,13 @@ input, textarea, .message, button {
     background-color: #1427fd;
     color: #f7f2e6;
     cursor: pointer;
+    box-shadow: 0px 0px 3px black;
 }
 
-.popup > input:hover, .popup > label:hover {
-    cursor: pointer;
+.submit-btn:active {
+    transform: scale(0.95);
 }
-  
+
 .lightning {
     position: absolute;
     width: 100%;

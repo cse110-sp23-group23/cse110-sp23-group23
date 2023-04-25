@@ -12,6 +12,8 @@ const lightningBolts = document.getElementsByClassName("lightning");
 
 // Constants
 const animationLengthMs = 750; // length of ball shaking animation in milliseconds
+const soundToggle = document.querySelector('#sound-button');
+const audioElement = document.getElementById("audio");
 
 // Objects
 const msg = new SpeechSynthesisUtterance();
@@ -42,6 +44,13 @@ const responses = [
     "My sources say no",
     "Outlook not so good",
     "Very doubtful"
+];
+
+const audioFiles = [
+    "assets/thunder.wav",
+    "assets/thunder2.wav",
+    "assets/thunder3.wav",
+    "assets/thunder4.wav"
 ];
 
 /**
@@ -89,13 +98,18 @@ function generateResponse(input, bias) {
 
 /**
  * Uses CSS to shake ball for a given amount of time
- * @author Luke Sheltraw
+ * @author Luke Sheltraw, Prash Katukojwala
  * @param   {int} length    length of time in ms to shake ball
  * @returns none            displays behavior on screen
  */
 function shakeBall(length) {
     for (let i = 0; i < lightningBolts.length; i++) {
         lightningBolts[i].classList.add('lightning-violent');
+    }
+    if (soundToggle.checked) {
+        const audioIndex = Math.floor(Math.random() * 4);
+        audioElement.src = audioFiles[audioIndex];
+        audioElement.play();
     }
     eightBall.style.animation = `shake ${animationLengthMs}ms ease-out ${length / animationLengthMs}`;
     questionInput.disabled = true;
@@ -105,6 +119,7 @@ function shakeBall(length) {
             lightningBolts[i].classList.remove('lightning-violent');
         }
         questionInput.disabled = false;
+        audioElement.volume.value = 0.2;
     }, length);
 }
 
