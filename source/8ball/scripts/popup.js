@@ -1,7 +1,7 @@
 // Page selectors
 const closeButton = document.getElementById('close-button');
 const openButton = document.getElementById('open-button');
-const popup = document.getElementById("popup");
+const popup = document.getElementById('popup');
 
 /**
  * Display popup to screen, and remap control of buttons to close it
@@ -10,7 +10,7 @@ const popup = document.getElementById("popup");
  */
 function openPopup() {
 	openButton.classList.add('clicked');
-	popup.style.display = "block";
+	popup.style.display = 'block';
 }
 
 /**
@@ -20,7 +20,7 @@ function openPopup() {
  */
 function closePopup() {
 	openButton.classList.remove('clicked');
-	popup.style.display = "none";
+	popup.style.display = 'none';
 }
 
 /**
@@ -30,7 +30,7 @@ function closePopup() {
  * @returns none
  */
 function togglePopup() {
-	if (popup.style.display == "block") {
+	if (popup.style.display === 'block') {
 		closePopup();
 	} else {
 		openPopup();
@@ -41,7 +41,7 @@ function togglePopup() {
 closeButton.addEventListener('click', closePopup);
 openButton.addEventListener('click', togglePopup);
 document.addEventListener('keydown', (event) => {
-    if (event.keyCode == 27) { // esc key
-        togglePopup();
-    }
+	if (event.key === 'Escape') {
+		togglePopup();
+	}
 });

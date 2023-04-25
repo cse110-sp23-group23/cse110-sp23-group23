@@ -14,10 +14,10 @@ body::before {
     background-image: url('assets/background.jpg');
     background-size: cover;
     position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     opacity: 0.65;
 }
 
@@ -32,6 +32,13 @@ body {
     padding: 0;
 }
 
+@media screen and (max-width: 600px) {
+    body::before {
+      background-size: 100% 100%;
+      overflow: hidden;
+    }
+}
+
 .container {
     display: flex;
     align-items: center;
@@ -43,6 +50,7 @@ h1 {
     text-align: center;
     color: #f7f2e6;
     text-shadow: 0 0 5px black;
+    font-family: Leopold;
 }
 
 .eight-ball:before {
@@ -85,15 +93,12 @@ h1 {
     }
 }
 
-#settings-title {
+.settings-title {
     margin-top: 0;
-}
-
-h1, #settings-title {
     font-family: Leopold;
 }
 
-span.copy {
+.copy {
     font-family: sans-serif;
 }
 
@@ -118,7 +123,7 @@ span.copy {
     text-align: center;
     width: 57%;
     position: absolute;
-    top: 0px;
+    top: 0;
     font-size: 17px;
     color: #f7f2e6;
 }
@@ -140,23 +145,19 @@ input, textarea, .message, button {
     border: 1px solid #ccc;
     resize: none;
     background-color: #f7f2e6;    
-    box-shadow: 0px 0px 5px black;
+    box-shadow: 0 0 5px black;
     transition: all 0.25s ease-out 0s;
 }
 
-.question-input, .submit-btn {
+.question-input:focus, .question-input:hover{
     outline: none;
+    transform: scale(1.02);
+    box-shadow: 0 0 10px black;
 }
 
-.question-input:focus, .question-input:hover {
-    transform: scale(1.02);
-    box-shadow: 0px 0px 10px black;
-}
- 
 .submit-btn:hover {
-    transition: all 0.25s ease-out 0s;
     transform: scale(1.02);
-    box-shadow: 0px 0px 5px black;
+    box-shadow: 0 0 5px black;
 }
   
 .submit-btn {
@@ -168,7 +169,8 @@ input, textarea, .message, button {
     background-color: #1427fd;
     color: #f7f2e6;
     cursor: pointer;
-    box-shadow: 0px 0px 3px black;
+    box-shadow: 0 0 3px black;
+    transition: transform 0.25s ease-out 0s;
 }
 
 .submit-btn:active {
@@ -197,10 +199,10 @@ input, textarea, .message, button {
 }
 
 /* Two different durations to create offset strikes */
-.lightning.atime {
+.atime {
     animation-duration: 1s;    
 }
-.lightning.btime {
+.btime {
     animation-duration: 1.7s;   
 }
 
@@ -242,12 +244,12 @@ input, textarea, .message, button {
 /* Triangle blue animation */
 @keyframes blue-triangle-animation {
     0% {
-        background-position: 0% 74%;
+        background-position: 0 74%;
     }
     50% {
         background-position: 100% 27%;
     }
     100% {
-        background-position: 0% 74%;
+        background-position: 0 74%;
     }
 }

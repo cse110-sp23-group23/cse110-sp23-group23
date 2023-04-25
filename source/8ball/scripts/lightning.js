@@ -7,7 +7,7 @@ const lightning = document.querySelectorAll('.lightning');
  * @returns {int}   random angle from 0 to 360deg
  */
 function getRandomAngle() {
-    return Math.floor(Math.random() * 360);
+	return Math.floor(Math.random() * 360);
 }
 
 /**
@@ -15,8 +15,8 @@ function getRandomAngle() {
  * @author Luke Sheltraw
  * @returns none
  */
-for (let i = 0; i < lightning.length; i++) {
-    lightning[i].addEventListener('animationiteration', () => {
-            lightning[i].style.transform = `translate(-50%, -50%) rotate(${getRandomAngle()}deg)`;
-    });
+for (let i = 0; i < lightning.length; i += 1) {
+	lightning[i].addEventListener('animationiteration', () => {
+		lightning[i].style.transform = `translate(-50%, -50%) rotate(${getRandomAngle()}deg)`;
+	});
 }
