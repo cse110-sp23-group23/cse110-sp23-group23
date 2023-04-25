@@ -1,6 +1,29 @@
+@font-face {
+    font-family: Leopold;
+    src: url(assets/Leopold.otf);
+}
+
+@font-face {
+    font-family: Stalker;
+    src: url(assets/stalker1.ttf);
+}
+
+body::before {
+    z-index: -1;
+    content: "";
+    background-image: url('assets/background.jpg');
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.65;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #F2F2F2;
+    background: rgb(131,142,199);
+    background-image: radial-gradient(circle, rgba(131,142,199,1) 0%, rgba(177,173,255,0.4234068627450981) 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,36 +32,104 @@ body {
     padding: 0;
 }
 
-h1 {
-    text-align: center;
+@media screen and (max-width: 600px) {
+    body::before {
+      background-size: 100% 100%;
+      overflow: hidden;
+    }
 }
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 40pt;
+    text-align: center;
+    color: #f7f2e6;
+    text-shadow: 0 0 5px black;
+    font-family: Leopold;
+}
+
+.eight-ball:before {
+    content: "";
+    position: absolute;
+    top: 1%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    background: radial-gradient(circle at 50% 0px, #696969, rgba(255, 255, 255, 0) 50%);
+    filter: blur(5px);
+    z-index: 2;
+  }
 
 .eight-ball {
     width: 300px;
     height: 300px;
-    background-color: #000;
+    background: radial-gradient(circle at 100px 100px, #3b3b3b, #000);
     border-radius: 50%;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
+    animation: breathing 5s ease-out infinite 0s;
+    box-shadow: 0 0 5px black;
+}
+
+@keyframes breathing {
+    0% {
+        transform: scale(1);
+    }
+    35% {
+        transform: scale(0.95);
+    }
+    60% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.settings-title {
+    margin-top: 0;
+    font-family: Leopold;
+}
+
+.copy {
+    font-family: sans-serif;
 }
 
 .message-container {
-    position: absolute;
-    top: 50%;
+    position: relative;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80%;
-    height: 50%;
+    width: 55%;
+    height: 55%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
-    border-radius: 3px;
+    background: radial-gradient(circle at 100px 100px, #1427fd, #000);
+    background-size: 400% 400%;
+    animation: blue-triangle-animation 4s ease infinite;
+    overflow-wrap: break-word;
+    clip-path: polygon(50% 75%, 0% 0%, 100% 0%);
 }
 
 .message {
-    font-size: 18px;
-    color: #000;
+    text-align: center;
+    width: 57%;
+    position: absolute;
+    top: 0;
+    font-size: 17px;
+    color: #f7f2e6;
+}
+
+input, textarea, .message, button {
+    font-family: Stalker, monospace;
 }
 
 .input-container {
@@ -49,23 +140,43 @@ h1 {
 }
   
 .question-input {
-    width: 70%;
     padding: 10px;
     border-radius: 3px;
     border: 1px solid #ccc;
     resize: none;
+    background-color: #f7f2e6;    
+    box-shadow: 0 0 5px black;
+    transition: all 0.25s ease-out 0s;
+}
+
+.question-input:focus, .question-input:hover{
+    outline: none;
+    transform: scale(1.02);
+    box-shadow: 0 0 10px black;
+}
+
+.submit-btn:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 5px black;
 }
   
 .submit-btn {
+    width: 100%;
     padding: 10px;
     margin-top: 10px;
     border: none;
     border-radius: 3px;
-    background-color: #007BFF;
-    color: #fff;
+    background-color: #1427fd;
+    color: #f7f2e6;
     cursor: pointer;
+    box-shadow: 0 0 3px black;
+    transition: transform 0.25s ease-out 0s;
 }
-  
+
+.submit-btn:active {
+    transform: scale(0.95);
+}
+
 .lightning {
     position: absolute;
     width: 100%;
@@ -82,41 +193,44 @@ h1 {
     animation-iteration-count: infinite;
 }
 
-/* Two different durations to create offset strikes */
-.lightning.atime {
-    animation-duration: 1s;    
-}
-.lightning.btime {
-    animation-duration: 1.7s;   
+.lightning-violent {
+    filter: brightness(0) saturate(100%) invert(11%) sepia(83%) saturate(6565%) hue-rotate(238deg) brightness(101%) contrast(128%);
+    animation-duration: 0.5s;
 }
 
-/* Trigger shake animation for 8-ball */
-.eight-ball.shake {
-    animation: shake 0.6s linear 1;
+/* Two different durations to create offset strikes */
+.atime {
+    animation-duration: 1s;    
+}
+.btime {
+    animation-duration: 1.7s;   
 }
 
 /* Definition of shake animation for 8-ball */
 @keyframes shake {
     0% {
-        transform: rotate(0);
+        transform: rotate(0) scale(1.0);
     }
     20% {
-        transform: rotate(-3deg);
+        transform: rotate(-6deg) scale(1.05);
     }
     40% {
-        transform: rotate(3deg);
+        transform: rotate(6deg) scale(1.0);
     }
     60% {
-        transform: rotate(-3deg);
+        transform: rotate(-6deg) scale(1.05);
     }
     80% {
-        transform: rotate(3deg);
+        transform: rotate(4.5deg) scale(1.0);
+    }
+    90% {
+        transform: rotate(0) scale(1.0);
     }
     100% {
-        transform: rotate(0);
+        transform: rotate(0) scale(1.0);
     }
 }
-  
+
 /* Definition of flicker animation for lightning bolts */
 @keyframes lightning {
     0%, 90%, 100% {
@@ -124,5 +238,18 @@ h1 {
     }
     92%, 94%, 96%, 98% {
         opacity: 1;
+    }
+}
+
+/* Triangle blue animation */
+@keyframes blue-triangle-animation {
+    0% {
+        background-position: 0 74%;
+    }
+    50% {
+        background-position: 100% 27%;
+    }
+    100% {
+        background-position: 0 74%;
     }
 }

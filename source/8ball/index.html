@@ -6,28 +6,99 @@
     <meta name="author" content="Team 23, CSE 110 UCSD SP23">
     <meta name="description" content="A magic 8 ball to fit all your needs. Ask me a question, but only if you're ready for the answer.">
     <meta name="keywords" content="magic, 8, ball, answer, question, fortune telling">
-    <title>Magic 8 Ball</title>
+    <title>The Mystic 8 Ball</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="popup.css">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
 <body>
     <div class="container">
-        <h1>Magic 8-Ball</h1>
+        <h1>The Mystic 8 Ball</h1>
         <div class="eight-ball">
             <div class="lightning atime"></div>
             <div class="lightning atime"></div>
             <div class="lightning btime"></div>
             <div class="lightning btime"></div>
             <div class="message-container">
-                <span class="message"></span>
+                <p class="message"></p>
             </div>
         </div>
         <div class="input-container">
-            <textarea class="question-input" placeholder="Ask a question..." rows="5" cols="30"></textarea>
-            <button class="submit-btn">Ask the Magic 8-Ball</button>
+            <textarea class="question-input" placeholder="Ask a question..." rows="5" cols="35"></textarea>
+            <button class="submit-btn">Ask the Magic 8 Ball</button>
         </div>
     </div>
+
+	<div class="popup" id="popup">
+		<span id="close-button">X</span>
+		<h2 class="settings-title">Settings</h2>
+        <section>
+            <p>Response Bias:</p>
+            <input type="radio" name="positivity-index" value="-1" id="neg">
+            <label for="neg">Negative</label>
+            <input type="radio" name="positivity-index" value="0" id="neut" checked>
+            <label for="neut">None</label>
+            <input type="radio" name="positivity-index" value="1" id="pos">
+            <label for="pos">Positive</label>
+        </section>
+        <hr>
+        <section>
+        <p>Audio:</p>
+            <div id="voices-menu">
+                <label for="dropdown">Voice:</label>
+                <select id="dropdown" name="names">
+                    <option value="Samantha">Samantha</option>
+                    <option value="Albert">Albert</option>
+                    <option value="Bad News">Bad News</option>
+                    <option value="Bahh" selected>Bahh</option>
+                    <option value="Bells">Bells</option>
+                    <option value="Boing">Boing</option>
+                    <option value="Bubbles">Bubbles</option>
+                    <option value="Carmit">Carmit</option>
+                    <option value="Wobble">Wobble</option>
+                    <option value="Good News">Good News</option>
+                    <option value="Grandma (English (US))">Grandma (English (US))</option>
+                    <option value="Jester">Jester</option>
+                    <option value="Junior">Junior</option>
+                    <option value="Organ">Organ</option>
+                    <option value="Superstar">Superstar</option>
+                    <option value="Tingting">Tingting</option>
+                    <option value="Trinoids">Trinoids</option>
+                    <option value="Whisper">Whisper</option>
+                    <option value="Xander">Xander</option>
+                    <option value="Zarvox">Zarvox</option>
+                    <option value="Zosia">Zosia</option>
+                    <option value="Zuzana">Zuzana</option>
+                    <option value="Google US English">Google US English</option>
+                    <option value="Google UK English Female">Google UK English Female</option>
+                    <option value="Google UK English Male">Google UK English Male</option>
+                </select>
+                <div id="tts-menu">
+                    <input type="checkbox" id="tts-button" checked>
+                    <label for="tts-button">Text to Speech</label>
+                </div>
+            </div>
+            <input type="checkbox" id="sound-button">
+            <label for="sound-button">Thunder</label>
+        </section>
+        <hr>
+        <section>
+            <p>Timing:</p>
+            <label for="median-value-timing">Median (ms):&nbsp;</label>
+            <input type="number" id="median-value-timing" min="0" max="10000" value="2000" step="100">
+            <label for="range-value-timing">Range (ms):&nbsp;</label>
+            <input type="number" id="range-value-timing" min="0" max="10000" value="600" step="50">
+        </section>
+        <section id="footer">
+            <p>This application was designed for Chrome.
+            <p><span class="copy">&copy;</span> 2023 Fortune 500</p>
+        </section>
+	</div>
+    <audio id="audio"></audio>
+    <img src="assets/settings.png" id="open-button" alt="settings icon">
+
     <script src="scripts/8ball.js"></script>
     <script src="scripts/lightning.js"></script>
+    <script src="scripts/popup.js"></script>
 </body>
 </html>
