@@ -114,7 +114,7 @@ function shakeBall(length) {
     eightBall.style.animation = `shake ${animationLengthMs}ms ease-out ${length / animationLengthMs}`;
     questionInput.disabled = true;
     setTimeout(() => {
-        eightBall.style.animation = 'none';
+        eightBall.style.animation ='breathing 5s ease-out infinite 1s';
         for (let i = 0; i < lightningBolts.length; i++) {
             lightningBolts[i].classList.remove('lightning-violent');
         }
