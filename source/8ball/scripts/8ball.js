@@ -3,8 +3,9 @@ const submitBtn = document.querySelector('.submit-btn');
 const questionInput = document.querySelector('.question-input');
 const message = document.querySelector('.message');
 const eightBall = document.querySelector('.eight-ball');
-const radioButtons = document.querySelectorAll('[name=positivity-index]');
+const radioButtons = Array.from(document.querySelectorAll('[name=positivity-index]'));
 const ttsToggle = document.querySelector('#tts-button');
+const voiceDropdown = document.querySelector('#dropdown');
 const medianValueInput = document.getElementById('median-value-timing');
 const rangeValueInput = document.getElementById('range-value-timing');
 const lightningBolts = document.querySelectorAll('.lightning');
@@ -163,7 +164,7 @@ function textToSpeech(text) {
 	}
 	msg.text = text;
 	msg.rate = 0.9; // speed of speech
-	const selectedVoice = voices.find((voice) => voice.name === document.getElementById('dropdown').value);
+	const selectedVoice = voices.find((voice) => voice.name === voiceDropdown.value);
 	if (selectedVoice) {
 		msg.voice = selectedVoice;
 	}
@@ -206,13 +207,7 @@ function triggerResponse() {
 	if (questionInput.value.trim()) { // if user asked a question
 		shakeBall(time);
 		setTimeout(() => {
-			let bias = 0;
-			for (let i = 0; i < radioButtons.length; i += 1) { // fetch current val of bias radio buttons
-				if (radioButtons[i].checked) {
-					bias = radioButtons[i].value;
-					break;
-				}
-			}
+			const bias = radioButtons.find((button) => button.checked).value;
 			const output = generateResponse(questionInput.value.trim(), parseInt(bias, 10));
 			message.textContent = output; // print response
 			textToSpeech(output); // say response

@@ -20,3 +20,7 @@ for (let i = 0; i < lightning.length; i += 1) {
 		lightning[i].style.transform = `translate(-50%, -50%) rotate(${getRandomAngle()}deg)`;
 	});
 }
+
+lightning.forEach((bolt) => bolt.addEventListener('animationiteration', () => {
+	bolt.style.transform = `translate(-50%, -50%) rotate(${getRandomAngle()}deg)`;
+}));
