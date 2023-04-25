@@ -143,7 +143,12 @@ function shakeBall(length) {
  * @author  Luke Sheltraw
  * @returns none    
  */
+let currentlyTriggered = false;
 function triggerResponse() {
+    if (currentlyTriggered) {
+        return;
+    }
+    currentlyTriggered = true;
     message.textContent = '';
     let medianTime = parseInt(medianValueInput.value);
     let rangeTime = parseInt(rangeValueInput.value);
@@ -161,9 +166,11 @@ function triggerResponse() {
             let output = generateResponse(questionInput.value.trim(), bias); // pick response
             message.textContent = output; // print response
             textToSpeech(output); // say response
+            currentlyTriggered = false;
         }, time);
     } else { // if user left input empty
         message.textContent = "Please ask a question!";
+        currentlyTriggered = false;
     }
 }
 
