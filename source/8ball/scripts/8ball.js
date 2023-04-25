@@ -3,11 +3,11 @@ const submitBtn = document.querySelector('.submit-btn');
 const questionInput = document.querySelector('.question-input');
 const message = document.querySelector('.message');
 const eightBall = document.querySelector('.eight-ball');
-const radioButtons = document.getElementsByName('positivity-index');
+const radioButtons = document.querySelectorAll('[name=positivity-index]');
 const ttsToggle = document.querySelector('#tts-button');
 const medianValueInput = document.getElementById('median-value-timing');
 const rangeValueInput = document.getElementById('range-value-timing');
-const lightningBolts = document.getElementsByClassName('lightning');
+const lightningBolts = document.querySelectorAll('.lightning');
 
 // Constants
 const animationLengthMs = 750; // length of ball shaking animation in milliseconds
@@ -64,9 +64,9 @@ function hash(input) {
 	for (let i = 0; i < input.length; i += 1) {
 		const char = input.charCodeAt(i);
 		hashVal = ((hashVal << 5) + hashVal) + char;
-		hashVal = hashVal & hashVal;
+		hashVal &= hashVal;
 	}
-	return Math.abs(hash);
+	return Math.abs(hashVal);
 }
 
 /**
@@ -78,13 +78,13 @@ function hash(input) {
 function convertBiasToResponse(bias) {
 	let index;
 	switch (bias) {
-		case '1': // 0 to goodIndexEnd
+		case 1: // 0 to goodIndexEnd
 			index = Math.floor(Math.random() * goodIndexEnd);
 			break;
-		case '-1': // badIndexStart to length
+		case -1: // badIndexStart to length
 			index = Math.floor(Math.random() * (responses.length - badIndexStart)) + badIndexStart;
 			break;
-		case '0': // all
+		case 0: // all
 		default:
 			index = Math.floor(Math.random() * responses.length);
 	}
@@ -101,10 +101,12 @@ function convertBiasToResponse(bias) {
  */
 function generateResponse(input, inputBias) {
 	let outputBias;
-	if ((hash(input) % 7 <= 3) && (inputBias !== '-1')) {
-		outputBias = '1';
+	if (inputBias !== 0) {
+		outputBias = inputBias;
+	} else if (hash(input) % 7 <= 3) {
+		outputBias = 1;
 	} else {
-		outputBias = '-1';
+		outputBias = -1;
 	}
 	return convertBiasToResponse(outputBias);
 }
@@ -116,21 +118,16 @@ function generateResponse(input, inputBias) {
  * @returns none            displays behavior on screen
  */
 function shakeBall(length) {
-	for (let i = 0; i < lightningBolts.length; i += 1) {
-		lightningBolts[i].classList.add('lightning-violent');
-	}
+	lightningBolts.forEach((bolt) => bolt.classList.add('lightning-violent'));
 	if (soundToggle.checked) {
-		const audioIndex = Math.floor(Math.random() * 4);
-		audioElement.src = audioFiles[audioIndex];
+		audioElement.src = audioFiles[Math.floor(Math.random() * 4)];
 		audioElement.play();
 	}
 	eightBall.style.animation = `shake ${animationLengthMs}ms ease-out ${length / animationLengthMs}`;
 	questionInput.disabled = true;
 	setTimeout(() => {
 		eightBall.style.animation = 'breathing 5s ease-out infinite 1s';
-		for (let i = 0; i < lightningBolts.length; i += 1) {
-			lightningBolts[i].classList.remove('lightning-violent');
-		}
+		lightningBolts.forEach((bolt) => bolt.classList.remove('lightning-violent'));
 		questionInput.disabled = false;
 		audioElement.volume.value = 0.2;
 	}, length);
@@ -216,7 +213,7 @@ function triggerResponse() {
 					break;
 				}
 			}
-			const output = generateResponse(questionInput.value.trim(), bias); // pick response
+			const output = generateResponse(questionInput.value.trim(), parseInt(bias, 10));
 			message.textContent = output; // print response
 			textToSpeech(output); // say response
 			currentlyTriggered = false;
