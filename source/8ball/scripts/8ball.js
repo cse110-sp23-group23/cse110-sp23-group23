@@ -60,38 +60,52 @@ const audioFiles = [
  * @returns {int}           hash of the string
  */
 function hash(input) {
-    let hash = 0;
-    if (input.length == 0) return hash;
+    let hash = 5381;
+    if (input.length == 0) return 0;
     for (i = 0; i < input.length; i++) {
         char = input.charCodeAt(i);
-        hash = ((hash << 5) - hash) + char;
+        hash = ((hash << 5) + hash) + char;
         hash = hash & hash;
     }
-    return hash;
+    return Math.abs(hash);
 }
  
 /**
- * Pick a seeded response from dictionary list based on string hash, current time, and bias
+ * Hash input string to determine if response should be positive or negative,
+ * and then call to convertBiasToResponse() for string answer
  * @author Luke Sheltraw
  * @param {string} input    question asked in text field
- * @param {int} bias        1 represents positive, 0 neutral, and -1 negative
+ * @param {int} inputBias   1 represents positive, 0 neutral, and -1 negative
  * @returns {string}        string representing the message to be printed to the 8ball
  */
-function generateResponse(input, bias) {
-    const hashVal = hash(input);
+function generateResponse(input, inputBias) {
+    let outputBias;
+    if ((hash(input) % 7 <= 3) && (inputBias != "-1")) {
+        outputBias = "1";
+    } else {
+        outputBias = "-1";
+    }
+    return convertBiasToResponse(outputBias);
+}
+
+/**
+ * Based on positive/negative bias, return a valid response (possibly inconclusive)
+ * @author Luke Sheltraw
+ * @param {int} bias   1 represents positive, 0 neutral, and -1 negative
+ * @returns {string}        string representing the message to be printed to the 8ball
+ */
+function convertBiasToResponse(bias) {
     let index;
-    switch (bias) {        
+    switch (bias) {
         case "1": // 0 to goodIndexEnd
-            index = (hashVal % goodIndexEnd + goodIndexEnd) % goodIndexEnd;
+            index = Math.floor(Math.random() * goodIndexEnd);
             break;
         case "-1": // badIndexStart to length
-            index = (hashVal % (responses.length - badIndexStart) + 
-                (responses.length - badIndexStart)) % ((responses.length - badIndexStart)) + badIndexStart;
+            index = Math.floor(Math.random() * (responses.length - badIndexStart)) + badIndexStart;
             break;
         case "0": // all
-        default:
-            index = (hashVal % responses.length + responses.length) % responses.length;
-            break;
+        default: 
+            index = Math.floor(Math.random() * responses.length);
     }
     return responses[index];
 }
