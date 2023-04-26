@@ -6,6 +6,15 @@
 [Google Drive Link](https://drive.google.com/drive/folders/1fS5PbOzavOzqdospdFvvXnRhxirArY-B?usp=sharing) with Google Team Resources.
 
 
+-----------------------------------------
+8-Ball Exploration Activity Links:
+[App]
+[Video]
+[Presentation](https://docs.google.com/presentation/d/1TfnMYepc6xlM0do1ICF59fR98w0THgKbod6YnlapVIY/edit#slide=id.g238ff5be2ce_0_32)
+-----------------------------------------
+
+
+
 
 We are using AGILE methodologies to develop fortune-telling-related web applications. 
 
