@@ -9,7 +9,7 @@
 -----------------------------------------
 8-Ball Exploration Activity Links:
 [App](https://cse110-sp23-group23.github.io/cse110-sp23-group23/source/8ball/)
-[Video]
+[Video](https://youtu.be/Lax-YO4mq7g)
 [Presentation](https://docs.google.com/presentation/d/1TfnMYepc6xlM0do1ICF59fR98w0THgKbod6YnlapVIY/edit#slide=id.g238ff5be2ce_0_32)
 [Code](https://github.com/cse110-sp23-group23/cse110-sp23-group23/tree/main/source/8ball)
 -----------------------------------------
