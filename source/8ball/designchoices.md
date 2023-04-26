@@ -23,3 +23,6 @@ The application was designed primarly for Chrome, but works well in _most_ other
 
 ### Stylistic Choices
 We chose to adhere to AirBnB style guidelines (except using tabs) as enforced by ESLint. 
+
+### Documentation
+We documented our Javascript using JSDocs.
