@@ -53,6 +53,34 @@ const audioFiles = [
 	'assets/thunder4.wav',
 ];
 
+const allowedVoices = [
+	'Samantha',
+	'Albert',
+	'Bad News',
+	'Bahh',
+	'Bells',
+	'Boing',
+	'Bubbles',
+	'Carmit',
+	'Wobble',
+	'Good News',
+	'Grandma (English (US))',
+	'Jester',
+	'Junior',
+	'Organ',
+	'Superstar',
+	'Tingting',
+	'Trinoids',
+	'Whisper',
+	'Xander',
+	'Zarvox',
+	'Zosia',
+	'Zuzana',
+	'Google US English',
+	'Google UK English Female',
+	'Google UK English Male',
+];
+
 /**
  * Return hash code of input string
  * @author Luke Sheltraw
@@ -140,11 +168,22 @@ function shakeBall(length) {
  * @author Luke Sheltraw
  * @returns none    side-effect of modifying voices array with new vals
  */
+const appendedVoices = [];
 let voices = [];
 function populateVoiceList() {
 	voices = speechSynthesis.getVoices();
 	if (voices.length === 0) {
 		setTimeout(populateVoiceList, 100);
+	} else {
+		voices.forEach((voice) => {
+			if (allowedVoices.includes(voice.name) && !appendedVoices.includes(voice.name)) {
+				const option = document.createElement('option');
+				option.value = voice.name;
+				option.textContent = voice.name;
+				voiceDropdown.appendChild(option);
+				appendedVoices.push(voice.name);
+			}
+		});
 	}
 }
 populateVoiceList();
