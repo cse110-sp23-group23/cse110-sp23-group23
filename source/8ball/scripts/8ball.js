@@ -147,6 +147,7 @@ function populateVoiceList() {
 		setTimeout(populateVoiceList, 100);
 	}
 }
+populateVoiceList();
 
 // Update list on change
 speechSynthesis.onvoiceschanged = populateVoiceList;
