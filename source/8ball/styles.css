@@ -64,7 +64,7 @@ h1 {
     background: radial-gradient(circle at 50% 0px, #696969, rgba(255, 255, 255, 0) 50%);
     filter: blur(5px);
     z-index: 2;
-  }
+}
 
 .eight-ball {
     width: 300px;
@@ -78,6 +78,7 @@ h1 {
     box-shadow: 0 0 5px black;
 }
 
+/* Simple breathing animation for 8 ball */
 @keyframes breathing {
     0% {
         transform: scale(1);
@@ -193,6 +194,7 @@ input, textarea, .message, button {
     animation-iteration-count: infinite;
 }
 
+/* Change properties of lightning when the ball is being shaked */
 .lightning-violent {
     filter: brightness(0) saturate(100%) invert(11%) sepia(83%) saturate(6565%) hue-rotate(238deg) brightness(101%) contrast(128%);
     animation-duration: 0.5s;
