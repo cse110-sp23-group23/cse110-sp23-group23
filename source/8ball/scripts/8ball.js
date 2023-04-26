@@ -180,6 +180,9 @@ function populateVoiceList() {
 				const option = document.createElement('option');
 				option.value = voice.name;
 				option.textContent = voice.name;
+				if (voice.name === 'Bahh') {
+					option.selected = true;
+				}
 				voiceDropdown.appendChild(option);
 				appendedVoices.push(voice.name);
 			}
