@@ -32,4 +32,6 @@
 - Ask about constraints during meeting with TA
     - We have a lot of ideas, but they may require frameworks—would that be allowed if we get a basic version running first and do proof of concepts?
 
+Miro board uploaded as pdf to `/specs/brainstorm/Fortune Telling Brainstorm.pdf`
+
 This meeting finished at 7:15 pm.
