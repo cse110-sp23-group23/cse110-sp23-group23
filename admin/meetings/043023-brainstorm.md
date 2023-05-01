@@ -23,9 +23,13 @@
     - Deciding next steps for Fortune telling
 
 ### **Future Investigation**:
-- 
+- Feasibility of possible technologies (3d model, sentiment analysis, )
+- Put together Project Proposal
 
 ### **Decisions Made (and Reasoning)**:
-- 
+- Continue braingstorming
+    - We got a lot done, but we can continue to add things here and there as ideas come to us.
+- Ask about constraints during meeting with TA
+    - We have a lot of ideas, but they may require frameworks—would that be allowed if we get a basic version running first and do proof of concepts?
 
-This meeting finished at : pm.
+This meeting finished at 7:15 pm.
