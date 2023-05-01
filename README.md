@@ -5,7 +5,7 @@
 
 [Google Drive Link](https://drive.google.com/drive/folders/1fS5PbOzavOzqdospdFvvXnRhxirArY-B?usp=sharing) with Google Team Resources.
 
-[Miro Brainstorming Link](https://miro.com/app/board/uXjVMN0H0PE=/)
+[Miro Brainstorming Link](https://miro.com/app/board/uXjVMN0H0PE=/) for main project
 
 
 -----------------------------------------
