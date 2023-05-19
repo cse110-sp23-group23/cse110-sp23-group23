@@ -16,3 +16,7 @@
 - Image compression (if not done)
 
 #### Push to GitHub pages
+
+#### Link to Diagram
+- [Diagram drawio file](admin/cipipeline/phase1.drawio.png)
+- If diagram does not show properly, [Diagram](admin/cpipeline/phase1diagram.png)
