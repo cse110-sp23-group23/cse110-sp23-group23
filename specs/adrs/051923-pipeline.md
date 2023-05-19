@@ -39,7 +39,7 @@ Opted for ESLint because it is the easiest to set up, learn and use than the oth
 How to have consistent, detailed code documentation? <br>
 How to compile all of our comments and documentation into one place?
 
-# Considered Options 
+## Considered Options 
 
 * Docusaurus
 * apiDoc
