@@ -2,7 +2,7 @@
 
 ## Context and Problem Statement
 
-How to write readable test assertions?
+How to write readable test assertions? <br>
 How to write effective unit tests that ensure correctness of a feature?
 
 ## Considered Options
@@ -30,13 +30,14 @@ How to ensure strong code quality and consistent coding style?
 
 ## Decision Outcome
 
-Opted for ESLint because it is the easiest to learn, set up, and use than the other alternatives.
+Opted for ESLint because it is the easiest to set up, learn and use than the other alternatives.
 
-# Use JSDocs for documentation compilation
+# Use JSDocs for documentation
 
 ## Context and Problem Statement
 
-How to compile all our documentation into one place?
+How to have consistent, detailed code documentation? <br>
+How to compile all of our comments and documentation into one place?
 
 # Considered Options 
 
@@ -45,6 +46,4 @@ How to compile all our documentation into one place?
 
 ## Decision Outcome
 
-Chose to use JSDocs because it is a simple, easy to use documentation generator that is able to suit our needs.
-
-
+Chose to use JSDocs because it is a simple, easy to use documentation generator that is able to suit our relatively straightforward needs.
