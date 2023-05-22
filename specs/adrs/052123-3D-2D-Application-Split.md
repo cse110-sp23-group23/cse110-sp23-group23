@@ -1,5 +1,5 @@
 ---
-date: {5/21/2023}
+date: 5/21/2023
 deciders: {Full team}
 ---
 
