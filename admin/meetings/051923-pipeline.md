@@ -6,13 +6,13 @@
 ### **Attendance**:
 - [x] Luke Sheltraw
 - [x] Luke Skerrett
-- [] Neel Basu
+- [ ] Neel Basu
 - [x] Xiaonan Fu
 - [x] Prashasth Katukojwala
 - [x] Eric Vu
 - [x] Aatash Pestonjamasp
 - [x] Runpeng (Benson) Jian
-- [] Christopher Hashim
+- [ ] Christopher Hashim
 - [x] Marc Baeuerle
 
 ### **Agenda**:
