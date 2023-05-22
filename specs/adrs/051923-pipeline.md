@@ -14,7 +14,7 @@ How to write effective unit tests that ensure correctness of a feature?
 
 ## Decision Outcome
 
-Opted for the Jest framwork because it requires less configuration and there is a lot of documentation online for the framework.
+The team opted for the Jest framwork because it requires less configuration and there is a lot of documentation online for the framework relative to the others.
 
 # Use ESLINT for static code analysis
 
@@ -30,7 +30,7 @@ How to ensure strong code quality and consistent coding style?
 
 ## Decision Outcome
 
-Opted for ESLint because it is the easiest to set up, learn and use than the other alternatives.
+The team opted for ESLint because it is the easiest to set up and has more configuration options than the alternatives. The configurability and ease of use has made this the top choice for us when it comes to linters.
 
 # Use JSDocs for documentation
 
@@ -46,4 +46,4 @@ How to compile all of our comments and documentation into one place?
 
 ## Decision Outcome
 
-Chose to use JSDocs because it is a simple, easy to use documentation generator that is able to suit our relatively straightforward needs.
+The team chose to use JSDocs because it is a simple, easy to use documentation generator that is able to suit our relatively straightforward needs.
