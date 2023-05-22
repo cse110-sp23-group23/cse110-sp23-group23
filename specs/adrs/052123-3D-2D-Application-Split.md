@@ -1,8 +1,7 @@
 ---
-date: 05/21/2023
-deciders: {Full team}
+Date: {05/21/2023}
+Deciders: {Full team}
 ---
-
 
 # Splitting Core Application functionality into 3D and 2D versions
 
