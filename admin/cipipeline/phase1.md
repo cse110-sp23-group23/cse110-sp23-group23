@@ -31,7 +31,7 @@
 
 #### Diagram
 - ![diagram of pipeline](phase1.png)
-- Hyperlink: [phase1diagram.png](phase1.png)
+- Hyperlink: [phase1.png](phase1.png)
 ----
 ## Future Plans:
 
