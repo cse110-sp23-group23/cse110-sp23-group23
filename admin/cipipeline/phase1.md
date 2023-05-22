@@ -3,15 +3,16 @@
 ## Through GITHUB actions (after a push)
 
 #### Run tests
-- use Jest Software
+- Use Jest Software
 - Kickback if fail
 
 #### Linter
-- use ESLINT
+- Use ESLINT
 - Kickback if fail, or auto fix if possible
 
 #### JSDOCs Generation
-- find action from action marketplace 
+- Find action from action marketplace 
+
 #### Minification
 - Image compression (if not done)
 
