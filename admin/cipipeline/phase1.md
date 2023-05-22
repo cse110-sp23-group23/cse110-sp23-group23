@@ -30,8 +30,8 @@
 - Site is live at [zoltar.live](https://zoltar.live) and JSDocs are available at [zoltar.live/jsdocs](https://zoltar.live/jsdocs)
 
 #### Diagram
-- ![diagram of pipeline](phase1diagram.png)
-- Hyperlink: [phase1diagram.png](phase1diagram.png)
+- ![diagram of pipeline](phase1.png)
+- Hyperlink: [phase1diagram.png](phase1.png)
 ----
 ## Future Plans:
 
