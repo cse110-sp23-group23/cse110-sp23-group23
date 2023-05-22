@@ -1,23 +1,43 @@
-# CI / CD PIPELINE *** WORKING DOCUMENT *** 
+# CI / CD PIPELINE
 
-## Through GITHUB actions (after a push)
+# Using GitHub Actions
+## Triggered by changes to `main` branch
+----
+## Currently Functional:
 
-#### Run tests
-- Use Jest Software
-- Kickback if fail
+#### Testing
+- Using Jest for a unit testing
+- Tests defined in `__tests__` folder as `*.test.js`
 
-#### Linter
-- Use ESLINT
-- Kickback if fail, or auto fix if possible
+#### Linting
+- Using ESLINT
+- Using slightly modified AirBnB style guidelines (specified in `package.json`)
 
-#### JSDOCs Generation
-- Find action from action marketplace 
+#### Documentation
+- Using JSDocs
+- Documentation pushed to `jsdocs/` folder in the form of `.html` files
 
 #### Minification
-- Image compression (if not done)
+- Continues only if all three of the previous steps succeeded, i.e.
+    * All unit tests passed
+    * All style guidelines passed
+    * JSDocs successfully created
+- Javascript is minifed using UglifyJS
+- Extra files are skinned from the repo and everything is placed into a new branch `gh-pages`
 
-#### Push to GitHub pages
+#### Final Deployment
+- `gh-pages` is deployed to GitHub Pages
+- Site is live at [zoltar.live](https://zoltar.live) and JSDocs are available at [zoltar.live/jsdocs](https://zoltar.live/jsdocs)
 
-#### Link to Diagram
-- [Diagram drawio file](admin/cipipeline/phase1.drawio.png)
-- If diagram does not show properly, [Diagram](admin/cpipeline/phase1diagram.png)
+#### Diagram
+- ![diagram of pipeline](phase1diagram.png)
+- Hyperlink: [phase1diagram.png](phase1diagram.png)
+----
+## Future Plans:
+
+### Code Quality
+- We looked at CodeClimate and are planning to implement code quality review through it
+
+### Image/Audio Compression
+- We can continue to make our `gh-pages` version lighter and lighter through more optimizations such as image and audio file compression before deployment
+
