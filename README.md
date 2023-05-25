@@ -16,7 +16,7 @@
 [Code](https://github.com/cse110-sp23-group23/cse110-sp23-group23/tree/main/source/8ball)
 -----------------------------------------
 Final Project Links:
-[Repo](https://github.com/cse110-sp23-group23/Zoltar)
+[App](https://zoltar.live) [Docs](https://zoltar.live/jsdocs) [Code](https://github.com/cse110-sp23-group23/Zoltar)
 -----------------------------------------
 
 We are using AGILE methodologies to develop fortune-telling-related web applications. 
