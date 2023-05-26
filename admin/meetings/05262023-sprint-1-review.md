@@ -12,7 +12,6 @@
 ### Issues resolved 
 - Resizing issues 
 - Make card slide out 
-- Flashing lightning ... 
 - Add button or other input type 
 - Loading screen time expiration -> 2D 
 - Audiofade not consistent 
