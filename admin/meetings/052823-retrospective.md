@@ -3,9 +3,14 @@
 ### 2D
 
 ## Issues Resolved
+
+### Adding Audio Elements
+#### What we did: Background audio elements added
+#### How: Added background eerie sound, along with lightning sound effects on occasion.
+
 ### Zoltar machine screen image
-#### What we did:
-#### How:
+#### What we did: Added image for Machine screen image
+#### How: Found image of Zoltar machine, placed into 2D main html, referenced in 2D main js
 
 ### Ticket Display
 #### What we did:
@@ -19,9 +24,13 @@
 #### What we did:
 #### How:
 
-## Issues Resolved
+
 
 ### 3D
+
+## Issues Resolved
+
+### Flashing Lightning
 #### What we did:
 #### How:
 
@@ -30,10 +39,6 @@
 #### How:
 
 ### Make card slide out
-#### What we did:
-#### How:
-
-### Add button or other input type
 #### What we did:
 #### How:
 
