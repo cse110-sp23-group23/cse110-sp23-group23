@@ -24,8 +24,8 @@
 #### Why?:
 
 ### Loading screen time expiration from 3D (PRASH)
-#### How / What?:
-#### Why?:
+#### How / What?: If it takes more than 20 seconds to load dependencies on the loading page, then the user is given a direct link to the 2D version of Zoltar.
+#### Why?: This feature was implemented to account for long asset loading times (Three.js) on slower hardware and for any dependency failures on the 3D version. 
 
 ## Looking Ahead: 
 We would like to implement an image bank for the tickets, in which each ticket has its own unique image on the back. After discussing, it is also a possibility that we may implement user input and have a similar response functionality to our [Magic 8 Ball](https://cse110-sp23-group23.github.io/cse110-sp23-group23/source/8ball/). We will also make it our mission to add succinct comments similar to our 3d scripts. 
