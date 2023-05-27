@@ -1,6 +1,6 @@
 # Sprint 1 Retrospective - v0.1.0
 
-### 2D
+# 2D
 
 ## Issues Resolved
 
@@ -24,9 +24,9 @@
 #### What we did:
 #### How:
 
+## Looking Ahead: 
 
-
-### 3D
+# 3D
 
 ## Issues Resolved
 
@@ -53,4 +53,6 @@
 ### Firefox with JSON import
 #### What we did:
 #### How:
+
+## Looking Ahead: 
 
