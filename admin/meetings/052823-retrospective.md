@@ -8,24 +8,24 @@
 ## Issues Resolved
 
 ### Adding Audio Elements (AATASH)
-#### What we did: Background audio elements added
-#### How: Added background eerie sound, along with lightning sound effects on occasion.
+#### How / What?: We added eerie background noise
+#### Why?: Added background eerie sound, along with lightning sound effects on occasion.
 
 ### Zoltar machine screen image (AATASH)
-#### What we did: Added image for Machine screen image
-#### How: Found image of Zoltar machine, placed into 2D main html, referenced in 2D main js
+#### How / What? : Added image for Machine screen image
+#### Why? : Found image of Zoltar machine, placed into 2D main html, referenced in 2D main js
 
 ### Ticket Display (NEEL)
-#### What we did:
-#### How:
+#### How / What? :
+#### Why?:
 
 ### Ticket generation functionality (XIOANAN)
-#### What we did:
-#### How:
+#### How / What?:
+#### Why?:
 
 ### Loading screen time expiration from 3D (PRASH)
-#### What we did:
-#### How:
+#### How / What?:
+#### Why?:
 
 ## Looking Ahead: 
 We would like to implement an image bank for the tickets, in which each ticket has its own unique image on the back. After discussing, it is also a possibility that we may implement user input and have a similar response functionality to our [Magic 8 Ball](https://cse110-sp23-group23.github.io/cse110-sp23-group23/source/8ball/). We will also make it our mission to add succinct comments similar to our 3d scripts. 
@@ -37,24 +37,24 @@ We would like to implement an image bank for the tickets, in which each ticket h
 ## Issues Resolved
 
 ### Resizing issues (ERIC)
-#### What we did:
-#### How:
+#### How / What?:
+#### Why?:
 
 ### Make card slide out (BENSON)
-#### What we did:
-#### How:
+#### How / What?:
+#### Why?:
 
 ### Loading screen time expiration -> 2D (CHRIS)
-#### What we did:
-#### How:
+#### How / What?:
+#### Why?:
 
 ### Audiofade not consistent (MARC)
-#### What we did:
-#### How:
+#### How / What?:
+#### Why?:
 
 ### Firefox with JSON import (LUKE) 
-#### What we did:
-#### How:
+#### How/What?:
+#### Why?:
 
 ## Looking Ahead: 
 We are looking to implement flipping collected tickets, discarding individual tickets, and clearing all of the collected tickets. We also plan on implementing GPT AI and a user input system for a better UX involving sentiment analysis and basic LLM capabilities... We have not ironed out the details, the general control flow is:
