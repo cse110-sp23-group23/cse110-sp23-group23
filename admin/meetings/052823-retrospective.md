@@ -19,7 +19,7 @@
 #### How / What? :
 #### Why?:
 
-### Ticket generation functionality (XIAONAN)
+### Ticket generation functionality
 #### How / What?: Generating the ticket with random fortune text; the fortune text is stored in a JSON file. Using a random index to get the fortune text from the JSON file.
 #### Why?: It provides a service to the front-end, to generate what should be displayed on the ticket. 
 
