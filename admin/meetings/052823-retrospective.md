@@ -19,9 +19,9 @@
 #### How / What? :
 #### Why?:
 
-### Ticket generation functionality (XIOANAN)
-#### How / What?:
-#### Why?:
+### Ticket generation functionality (XIAONAN)
+#### How / What?: Generating the ticket with random fortune text; the fortune text is stored in a JSON file. Using a random index to get the fortune text from the JSON file.
+#### Why?: It provides a service to the front-end, to generate what should be displayed on the ticket. 
 
 ### Loading screen time expiration from 3D 
 #### How / What?: If it takes more than 20 seconds to load dependencies on the loading page, then the user is given a direct link to the 2D version of Zoltar.
