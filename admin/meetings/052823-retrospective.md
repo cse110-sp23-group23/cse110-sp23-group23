@@ -8,12 +8,12 @@
 ## Issues Resolved
 
 ### Adding Audio Elements (AATASH)
-#### How / What?: We added eerie background noise
-#### Why?: Added background eerie sound, along with lightning sound effects on occasion.
+#### How / What?: We added an eerie background noise, along with lightning sound effects on occasion.
+#### Why?: The background noises are meant to add to the character of the Zoltar machine as slightly ominous. Additionally, the lightning sounds make the machine a bit more foreboding, and make it seem like it is truly working and _generating_ a fortune.
 
 ### Zoltar machine screen image (AATASH)
-#### How / What? : Added image for Machine screen image
-#### Why? : Found image of Zoltar machine, placed into 2D main html, referenced in 2D main js
+#### How / What? : Added image for Machine screen image: Found image of Zoltar machine, placed into 2D main html, referenced in 2D main js.
+#### Why? : The app needs a frontend in order to generate the tickets, and make it seem as if Zoltar/ the Zoltar machine is doing so. Having an image of the machine in the 2D version adds user immersion, as if they are actually using a machine.
 
 ### Ticket Display (NEEL)
 #### How / What? :
