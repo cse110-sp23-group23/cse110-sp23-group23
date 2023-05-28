@@ -49,8 +49,8 @@ We would like to implement an image bank for the tickets, in which each ticket h
 #### Why?:
 
 ### Audiofade not consistent (MARC)
-#### How / What?:
-#### Why?:
+#### How / What?: After pressing any key on the Zoltar splash screen, the audio somestimes faes in but sometimes does not.
+#### Why?: When the audio didn't fade in, it would play a full volume instantly which could be disturb the user experience. 
 
 ### Firefox with JSON import (LUKE) 
 #### How/What?:
