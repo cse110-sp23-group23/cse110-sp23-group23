@@ -41,8 +41,8 @@ We would like to implement an image bank for the tickets, in which each ticket h
 #### Why?:
 
 ### Make card slide out (BENSON)
-#### How / What?:
-#### Why?:
+#### How / What?: While generating a ticket, the ticket slides out from the dispenser instead of appearing.
+#### Why?: It makes the simulating process more real and smooth to add a animation for the ticket sliding out, so that the user could have a more immersive and concrete experience.
 
 ### Loading screen time expiration -> 2D (CHRIS)
 #### How / What?:
