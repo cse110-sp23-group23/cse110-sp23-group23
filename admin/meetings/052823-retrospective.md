@@ -44,9 +44,9 @@ We would like to implement an image bank for the tickets, in which each ticket h
 #### How / What?: While generating a ticket, the ticket slides out from the dispenser instead of appearing.
 #### Why?: It makes the simulating process more real and smooth to add a animation for the ticket sliding out, so that the user could have a more immersive and concrete experience.
 
-### Loading screen time expiration -> 2D (CHRIS)
-#### How / What?:
-#### Why?:
+### Loading screen time expiration -> 2D
+#### How / What?: While Zoltar is loading, if the assets are not able to load after a certain amount of time, an option pops up to switch to a 2D version of Zoltar. This is done buy using an initialization function with a timer where if the timer runs out, the option is taken out of its hidden state.
+#### Why?: This allows people with a poor internet connection and/or a slower device to access the site in a usable state for them.
 
 ### Audiofade not consistent
 #### How / What?: After pressing any key on the Zoltar splash screen, the audio somestimes fades in but sometimes does not.
