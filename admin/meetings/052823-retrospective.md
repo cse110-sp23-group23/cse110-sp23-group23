@@ -37,8 +37,8 @@ We would like to implement an image bank for the tickets, in which each ticket h
 ## Issues Resolved
 
 ### Resizing issues (ERIC)
-#### How / What?:
-#### Why?:
+#### How / What?: Resizing window would cause incorrect behavior such as black bars appearing on the borders of screen and click listeners being offset. 
+#### Why?: If the user were to resize their window, this would cause the website to malfunction. This is a crucial issue to fix because it would cause the user to have a bad experience. 
 
 ### Make card slide out 
 #### How / What?: While generating a ticket, the ticket slides out from the dispenser instead of appearing.
