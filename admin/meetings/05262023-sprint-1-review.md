@@ -1,6 +1,7 @@
 # Sprint Review 1 - 0.1.0 05/26/23
 ## 2D Version
-### Issues resolved - Created a wireframe work of a webpage for 2d version 
+### Issues resolved 
+- Created a wireframe work of a webpage for 2d version 
 - Zoltar machine screen image 
 - Ticket Display 
 - Ticket generation functionality 
