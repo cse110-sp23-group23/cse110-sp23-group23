@@ -4,7 +4,6 @@
 
 <img width="447" alt="demo " src="https://github.com/cse110-sp23-group23/cse110-sp23-group23/assets/120541745/e817c797-f1f8-4e7b-b9a2-87f041b1c239">
 
-
 ## Issues Resolved
 
 ### Adding Audio Elements 
@@ -12,7 +11,7 @@
 #### Why?: The background noises are meant to add to the character of the Zoltar machine as slightly ominous. Additionally, the lightning sounds make the machine a bit more foreboding, and make it seem like it is truly working and _generating_ a fortune.
 
 ### Zoltar machine screen image
-#### How / What? : Added image for Machine screen image: Found image of Zoltar machine, placed into 2D main html, referenced in 2D main js.
+#### How / What?: Added image for Machine screen image: Found image of Zoltar machine, placed into 2D main html, referenced in 2D main js.
 #### Why? : The app needs a frontend in order to generate the tickets, and make it seem as if Zoltar/ the Zoltar machine is doing so. Having an image of the machine in the 2D version adds user immersion, as if they are actually using a machine.
 
 ### Ticket Display
@@ -36,7 +35,7 @@ We would like to implement an image bank for the tickets, in which each ticket h
 
 ## Issues Resolved
 
-### Resizing issues (ERIC)
+### Resizing issues
 #### How / What?: Resizing window would cause incorrect behavior such as black bars appearing on the borders of screen and click listeners being offset. 
 #### Why?: If the user were to resize their window, this would cause the website to malfunction. This is a crucial issue to fix because it would cause the user to have a bad experience. 
 
@@ -52,8 +51,8 @@ We would like to implement an image bank for the tickets, in which each ticket h
 #### How / What?: After pressing any key on the Zoltar splash screen, the audio somestimes fades in but sometimes does not.
 #### Why?: When the audio didn't fade in, it would play a full volume instantly which could be disturb the user experience. 
 
-### Firefox with JSON import (LUKE) 
-#### How/What?: Could not successfully load assets in Firefox browser, problem with compatability with JSON import. 
+### Firefox with JSON import
+#### How / What?: Could not successfully load assets in Firefox browser, problem with compatability with JSON import. 
 #### Why?: The website would not load in firefox. Solving this issue makes the UX for firefox users, otherwise they probably just would you use another fortune telling website. 
 
 ## Looking Ahead: 
