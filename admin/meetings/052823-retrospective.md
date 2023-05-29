@@ -15,9 +15,9 @@
 #### How / What? : Added image for Machine screen image: Found image of Zoltar machine, placed into 2D main html, referenced in 2D main js.
 #### Why? : The app needs a frontend in order to generate the tickets, and make it seem as if Zoltar/ the Zoltar machine is doing so. Having an image of the machine in the 2D version adds user immersion, as if they are actually using a machine.
 
-### Ticket Display (NEEL)
-#### How / What? :
-#### Why?:
+### Ticket Display
+#### How / What?: Added ticket display functionality as a pop-up screen to show the fortune (linked to ticket generation functionality)
+#### Why?: Adds a level of interaction to Zoltar. Benefits the UX by making the user feel as if the Zoltar machine is generating a ticket live and showing as a popup.
 
 ### Ticket generation functionality
 #### How / What?: Generating the ticket with random fortune text; the fortune text is stored in a JSON file. Using a random index to get the fortune text from the JSON file.
