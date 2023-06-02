@@ -1,0 +1,34 @@
+## Meeting Minutes: Team 23 (Fortune 500)
+### Mid Sprint 2 Meeting / Standup
+
+### 02 June 2023, 2:00-3:00 pm @ Geisel Library and Zoom
+
+### **Attendance**:
+- [x] Luke Sheltraw
+- [ ] Luke Skerrett
+- [x] Neel Basu
+- [x] Xiaonan Fu
+- [x] Prashasth Katukojwala
+- [x] Eric Vu
+- [x] Aatash Pestonjamasp
+- [x] Runpeng (Benson) Jian
+- [x] Christopher Hashim
+- [x] Marc Baeuerle
+
+### **Agenda**:
+1. Old Business
+    - We got a meme made of us in Slack 😎
+3. New Business
+    - Adding more issues to GitHub
+    - Discussing forward path for image banks and voiceline banks
+    - CI/CD testing discussion
+
+### **Future Investigation**:
+- More testing
+- Consider UI fixes/changes
+
+### **Decisions Made (and Reasoning)**:
+- Neel, Aatash, and Chris will find and record voicelines; each will take different paths to come up with voice lines and compare pros vs cons of each; team can vote after
+- Luke will investigate using Percy.io to set up UI testing
+
+This meeting finished at 3:00 pm.
