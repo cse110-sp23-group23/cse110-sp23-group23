@@ -4,7 +4,7 @@ Coding style is managed by EsLint
 
 These guidelines were established during sprint 1, but official documentation was never added
 
-## These are the following thing EsLint checks for:
+## These are the following things EsLint checks for:
 - When speech marks are used, always use single quotes. i.e ''
 - Variables that are not reassigned within their scope must be declared using 'const'
 - No trailing spaces at the end of each line
