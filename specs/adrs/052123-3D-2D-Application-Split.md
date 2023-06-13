@@ -40,4 +40,4 @@ Unit testing could include:
 <!-- This is an optional element. Feel free to remove. -->
 ## More Information
 
-We will be running the development of both versions in parallel with a part of the team working on the 2D version and another part working on the 3D version. The assignees for each version have yet to be determined as of 5/21/2023.
+We will be running the development of both versions in parallel with a part of the team working on the 2D version and another part working on the 3D version. ~~The assignees for each version have yet to be determined as of 5/21/2023.~~ 
