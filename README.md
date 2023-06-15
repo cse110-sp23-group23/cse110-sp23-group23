@@ -17,7 +17,7 @@
 -----------------------------------------
 Final Project Links:
 [App](https://zoltar.live) | [Docs](https://zoltar.live/jsdocs) | [Code](https://github.com/cse110-sp23-group23/Zoltar) |
-[Sprint 1 Video](https://www.youtube.com/watch?v=395uWg8oaS0) | [Public Video]()
+[Sprint 1 Video](https://www.youtube.com/watch?v=395uWg8oaS0) | [Public Video](https://youtu.be/P_2KkEwSmiY)
 -----------------------------------------
 
 We are using AGILE methodologies to develop fortune-telling-related web applications. 
